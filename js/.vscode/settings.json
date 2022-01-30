@@ -1,0 +1,14 @@
+{
+    "window.title": "[JS - package-test-utils]  ",  
+    "workbench.colorTheme": "Kimbie Dark",   
+    "workbench.colorCustomizations": {
+        "[Kimbie Dark]": {
+             "activityBar.background": "#25271e",
+             "statusBar.background": "#25271e",
+             "titleBar.activeBackground": "#25271e",
+             "titleBar.inactiveBackground": "#25271e",
+             "scrollbar.shadow": "#25271e",
+             "scrollbarSlider.background": "#25271e",
+        }
+    }
+}

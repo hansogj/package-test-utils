@@ -1,0 +1,14 @@
+{
+    "window.title": "[TS - package-test-utils]",  
+    "workbench.colorTheme": "Darktooth",   
+    "workbench.colorCustomizations": {
+        "[merko's green theme]": {
+            // "activityBar.background": "#25271e",
+            // "statusBar.background": "#25271e",
+            // "titleBar.activeBackground": "#25271e",
+            // "titleBar.inactiveBackground": "#25271e",
+            // "scrollbar.shadow": "#25271e",
+            // "scrollbarSlider.background": "#25271e",
+        }
+    }
+}

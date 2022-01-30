@@ -36,7 +36,7 @@ describe("typescripts", () => {
       ["h5", true],
       ["li", false],
     ] as Array<[string, boolean]>)("find(%s)", (selector, expected) => {
-      beforeEach(() => find(selector, document.body).onEmpty(spy));
+      beforeEach(() => find(selector, document.body).onEmpty(spy as any));
       it(`should ${expected ? "" : "not "}fire onEmpty callback`, () => {
         expected
           ? expect(spy).toHaveBeenCalledTimes(1)

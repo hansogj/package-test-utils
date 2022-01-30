@@ -2,4 +2,7 @@
 
 Test suite for hansogj npm packages
 
-Enter catalog ts or js , update dependencies and run script
+### Installation
+
+Enter catalog ts or js, run `npm ci` and then ` npm run serve` and `npm run test:watch`
+

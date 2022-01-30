@@ -11,7 +11,7 @@ const config = {
     },
     devtool: "source-map",
     devServer: {
-        open: true,
+        open: false,
         port :3113,
         host: 'localhost',
     },

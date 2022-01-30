@@ -11,17 +11,29 @@ body > div {
 }
 
 a {
-    color: #333;
+  color: #333;
 }
 
 body > div > h1 {
   color: darkcyan;
 }
 
-body > div > pre {
-  background-color: darkcyan;
+body > div > #verification {
+  background-color: #333333;
   color: #d7f6fa;
   padding: 20px;
   border-radius: 20px;
-  
 }
+
+#verification > pre {
+  padding: 0;
+  margin: 0;
+}
+
+#verification > pre.error {
+    color: #dd3333;
+} 
+
+#verification > pre.success {
+    color: #26d137;
+} 

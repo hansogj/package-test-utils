@@ -1,30 +1,38 @@
-
-
-
 body {
-    background-color: #6d7780;
-  }
-  
-  body > div {
-    background-color: #333;
-    color: #8ccdff;
-    margin: 20px;
-    padding: 20px;    
-    border-radius: 20px;
-    box-shadow: 5px 5px #3333331f;
-  }
+  background-color: #6d7780;
+}
+
+body > div {
+  background-color: #333;
+  color: #8ccdff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px #3333331f;
+}
 a {
-    color: #6d7780;
-}  
-  body > div > h1 {
-    color:  #8ccdff;
-  }
-  
-  body > div > pre {
-    background-color:  #8ccdff;
-    color: #333;
-    padding: 20px;
-    border-radius: 20px;
-    
-  }
-  
+  color: #6d7780;
+}
+body > div > h1 {
+  color: #8ccdff;
+}
+
+body > div > #verification {
+  background-color: #c7e1f5;
+  color: #333;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#verification > pre {
+  padding: 0;
+  margin: 0;
+}
+
+#verification > pre.error {
+  color: #dd3333;
+}
+
+#verification > pre.success {
+  color: #055a0e;
+}

@@ -5,46 +5,42 @@ import { defined, definedList } from "array.defined";
 import "array.defined/lib/polyfill";
 import maybe from "maybe-for-sure";
 
-
-let i = 0;
-const expectedLogs = 9;
-
-const log = (...output) => {
-    i = i + 1;
-    output.map(console.log);
-    const pre = window.document.querySelector("pre");
-    pre.innerHTML = `${pre.innerHTML} \n> ${output
-        .map((it) => JSON.stringify(it, null, 4))
-        .join(", ")}`;
-   
-};
-
+import { verify } from './verify';
 
 export const run = () => {
-    log("Hello JavaScript");
-    [].onEmpty(() => log("Array is empty"));
-
-    log(["array defined", null, false, undefined, 0, 1].defined().join(", "));
-    log(definedList(["definedList", null, false, undefined, 0, 1]).join(", "));
-    log("defined", defined(null), defined(""), defined(true));
-    log("allDefined", [false, true].allDefined());
-    log("array first", ["first", "second"].first());
-
-    log(
-        "li:",
-        find("li", window.document.body).map((e) => e.innerText)
+    verify("hello", "javascript").toEqual("javascript");
+    verify("goodbye", "javascript").toEqual("typescript");
+    verify(
+      "array.onEmpty",
+      [].onEmpty((o) => o.push("is empty")).shift()
+    ).toEqual("is empty");
+    verify(
+      "array.onEmpty",
+      ["is not empty"].onEmpty(() => o.push("is empty")).shift()
+    ).toEqual("is not empty");
+    verify("array defined", [null, false, undefined, 0, 1].defined()).toEqual(
+      "[0,1]"
     );
-    
-    maybe(find("ul"))
+    verify("definedList", definedList([null, false, undefined, 0, 1])).toEqual(
+      "[0,1]"
+    );
+    verify("defined", defined(null), defined(""), defined(true)).toEqual(
+      "false, false, true"
+    );
+    verify("allDefined", [false, true].allDefined()).toEqual("[]");
+    verify("array first", ["first", "second"].first()).toEqual("[first]");
+  
+    verify(
+      "li:",
+      find("li", window.document.body).map((e) => e.innerText)
+    ).toEqual("[find-js,array.onempty,array.defined,maybe-for-sure]");
+    verify(
+      "maybe",
+      maybe(find("ul"))
         .map((it) => it.first().shift())
         .map((it) => it.nodeName)
-        .ifSomething((it) => log(`found one ${it} in set`))
-        .valueOrExecute(() => log("no ul in set"));
-
-    setTimeout(() => {
-        if (i !== expectedLogs) {
-            log(`You have logged ${i} times - expected to log ${expectedLogs} times`);
-        }
-    }, 1000);
+        .valueOrExecute(() => "no ul in set")
+    ).toEqual("UL");
+   
 
 }

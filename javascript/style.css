@@ -1,0 +1,19 @@
+body {
+  background-color: #fff;
+}
+
+body > div {
+  border-radius: 0;
+  background-color: #000;
+  color: #fa9f9f;
+  box-shadow: 5px 5px 15px #3333331f;
+}
+a {
+  color: #6d7780;
+}
+
+body > div > #verification {
+  background-color: #fff;
+  color: #000;
+  border-color: #6d7780;
+}

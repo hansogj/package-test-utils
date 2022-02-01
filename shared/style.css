@@ -1,0 +1,39 @@
+body {
+  background-color: #333333;
+  font-family: 'Source Sans Pro', 'Lucida Grande', sans-serif;
+  font-size: 18px;
+}
+
+body > div {
+  background-color: #FFF;
+  color: #1a2636;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px #adbbc961;
+}
+a {
+  color: #1a2636;
+}
+
+body > div > #verification {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  border: #BBB 5px inset;
+}
+
+#verification > pre {
+    font-family: 'Courier New', Courier, monospace;
+  padding: 0;
+  margin: 0;
+}
+
+#verification > pre.error {
+    color: #dd3333;
+} 
+
+#verification > pre.success {
+    color: #26d137;
+} 
+

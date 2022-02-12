@@ -36,11 +36,11 @@
         "webpack-dev-server": "^4.7.3"
     },
     "dependencies": {
-        "abonnement-js": "2.0.0",
-        "array.defined": "3.0.0",
+        "abonnement-js": "2.0.1",
+        "array.defined": "3.0.1",
         "array.flatmap": "^1.1.0",
-        "array.onempty": "2.0.2",
-        "find-js": "4.0.2",
-        "maybe-for-sure": "1.4.0"
+        "array.onempty": "2.0.3",
+        "find-js": "4.0.3",
+        "maybe-for-sure": "1.4.1"
     }
 }

@@ -3,8 +3,9 @@
 window.run = () => {
     const { defined, definedList } = window.defined;
     const find = window.find.default;
+    const maybe = window.maybe.default;
 
-    verify("hello", () => "javascript").toEqual("typescript");
+    verify("hello", () => "javascript").toEqual("javascript");
     verify("array.onEmpty", () =>
         [].onEmpty((o) => o.push("is empty")).shift()
     ).toEqual("is empty");
@@ -29,7 +30,15 @@ window.run = () => {
     ).toEqual([
         "find-js",
         "array.onempty",
-        "array.defined"
+        "array.defined",
+        "maybe-for-sure"
     ]);
+
+    verify("maybe", () =>
+        maybe(find("ul"))
+            .map((it) => it.first().shift())
+            .map((it) => it.nodeName)
+            .valueOrExecute(() => "no ul in set")
+    ).toEqual("UL");
 
 }

@@ -3,8 +3,8 @@
  */
 
 import { Abonnement } from "abonnement-js";
-import { definedList } from "array.defined";
-import "array.onempty";
+import { definedList } from "@hansogj/array.utils/lib/defined";
+import "@hansogj/array.utils/lib/onEmpty";
 import find from "find-js";
 
 const template = `

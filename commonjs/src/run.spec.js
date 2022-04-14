@@ -5,8 +5,8 @@
 
 import { jest } from '@jest/globals';
 import { Abonnement } from "abonnement-js";
-import { definedList } from "array.defined";
-import "array.onempty";
+import { definedList } from "@hansogj/array.utils/lib/defined";
+import "@hansogj/array.utils";
 import find from 'find-js';
 
 const template = `
@@ -17,6 +17,7 @@ const template = `
  <li>4</li>
  </ul>
  `;
+
 
 describe("javascripts", () => {
 

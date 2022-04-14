@@ -36,10 +36,8 @@
         "webpack-dev-server": "^4.8.1"
     },
     "dependencies": {
+        "@hansogj/array.utils": "1.0.0",
         "abonnement-js": "2.1.0",
-        "array.defined": "^3.1.0",
-        "array.flatmap": "^1.1.0",
-        "array.onempty": "2.2.0",
         "find-js": "4.0.4",
         "maybe-for-sure": "^1.4.2"
     }

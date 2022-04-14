@@ -1,11 +1,12 @@
 import { Abonnement } from "abonnement-js";
-import { defined, definedList } from "array.defined";
-import "array.onempty";
+
+import "@hansogj/array.utils";
+import { defined, definedList } from "@hansogj/array.utils/lib/defined";
 import find from "find-js";
 import maybe from "maybe-for-sure";
 
 import { verify } from "../../shared/verify";
- 
+
 export const run = () => {
   const abonnement: Abonnement<String> = new Abonnement<String>("init");
   verify("hello", () => "typescript").toEqual("typescript");
@@ -32,8 +33,7 @@ export const run = () => {
     find("li", window.document.body).map((e: HTMLElement) => e.innerText)
   ).toEqual([
     "find-js",
-    "array.onempty",
-    "array.defined",
+    "@hansogj/array.utils",
     "maybe-for-sure",
     "abonnement-js",
   ]);

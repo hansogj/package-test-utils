@@ -1,4 +1,4 @@
-import { Abonnement } from "abonnement-js";
+import { Abonnement } from "@hansogj/abonnement-js";
 
 import "@hansogj/array.utils";
 import { defined, definedList } from "@hansogj/array.utils/lib/defined";
@@ -35,7 +35,7 @@ export const run = () => {
     "find-js",
     "@hansogj/array.utils",
     "maybe-for-sure",
-    "abonnement-js",
+    "@hansogj/abonnement-js",
   ]);
   verify("maybe", () =>
     maybe(find("ul"))
@@ -44,6 +44,8 @@ export const run = () => {
       .valueOrExecute(() => "no ul in set")
   ).toEqual("UL");
 
-  abonnement.abonner((val) => verify("abonnement", () => val).toEqual("init"));
+  abonnement.abonner((val) =>
+    verify("@hansogj/abonnement", () => val).toEqual("init")
+  );
   abonnement.varsle("oppdatert verdi");
 };

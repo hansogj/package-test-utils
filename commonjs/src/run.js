@@ -1,4 +1,4 @@
-const Abonnement = require("abonnement-js").Abonnement;
+const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("find-js").default;
 const maybe = require("maybe-for-sure").default;
 const verify = require('../../shared/verify').verify;
@@ -35,7 +35,7 @@ export const run = () => {
         "find-js",
         "@hansogj/array.utils",
         "maybe-for-sure",
-        "abonnement-js",
+        "@hansogj/abonnement-js",
     ]);
     verify("maybe", () =>
         maybe(find("ul"))
@@ -44,6 +44,6 @@ export const run = () => {
             .valueOrExecute(() => "no ul in set")
     ).toEqual("UL");
 
-    abonnement.abonner((val) => verify("abonnement", () => val).toEqual("init"));
+    abonnement.abonner((val) => verify("@hansogj/abonnement", () => val).toEqual("init"));
     abonnement.varsle("oppdatert verdi");
 };

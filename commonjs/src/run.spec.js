@@ -4,7 +4,7 @@
 
 
 import { jest } from '@jest/globals';
-import { Abonnement } from "abonnement-js";
+import { Abonnement } from "@hansogj/abonnement-js";
 import { definedList } from "@hansogj/array.utils/lib/defined";
 import "@hansogj/array.utils";
 import find from 'find-js';
@@ -60,7 +60,7 @@ describe("javascripts", () => {
         it("first", () => expect(array.first()).toEqual([null]));
     });
 
-    describe("abonnement ", () => {
+    describe("@hansogj/abonnement ", () => {
         let abonnentSpy;
         let abonnement;
 

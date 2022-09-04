@@ -31,7 +31,7 @@ window.run = () => {
         "find-js",
         "@hansogj/array.utils",
         "maybe-for-sure",
-        "abonnement-js"
+        "@hansogj/abonnement-js"
     ]);
 
     verify("maybe", () =>

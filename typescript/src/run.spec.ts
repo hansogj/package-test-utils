@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { Abonnement } from "abonnement-js";
+import { Abonnement } from "@hansogj/abonnement-js";
 import { definedList } from "@hansogj/array.utils/lib/defined";
 import "@hansogj/array.utils/lib/onEmpty";
 import find from "find-js";
@@ -57,7 +57,7 @@ describe("typescripts", () => {
     it("first", () => expect(array.first()).toEqual([null]));
   });
 
-  describe("abonnement ", () => {
+  describe("@hansogj/abonnement ", () => {
     let abonnentSpy: jest.SpyInstance;
     let abonnement: Abonnement<String>;
 

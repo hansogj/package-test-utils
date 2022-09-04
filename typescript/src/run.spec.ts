@@ -5,7 +5,7 @@
 import { Abonnement } from "@hansogj/abonnement-js";
 import { definedList } from "@hansogj/array.utils/lib/defined";
 import "@hansogj/array.utils/lib/onEmpty";
-import find from "find-js";
+import find from "@hansogj/find-js";
 
 const template = `
  <ul>
@@ -23,7 +23,7 @@ describe("typescripts", () => {
     document.body.innerHTML = template;
     spy = jest.fn();
   });
-  describe("find-js", () => {
+  describe("@hansogj/find-js", () => {
     it("use jsdom in this test file", () => expect(find("li")).toHaveLength(4));
     it("use jsdom in this test file", () =>
       expect(find("haba")).toHaveLength(0));

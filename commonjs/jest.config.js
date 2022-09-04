@@ -5,8 +5,8 @@
 module.exports = {
     clearMocks: true,
     testEnvironment: "jsdom",
-    transformIgnorePatterns : [
-        "/node_modules/find-js"
+    transformIgnorePatterns: [
+        "/node_modules/@hansogj/find-js"
 
     ]
 };

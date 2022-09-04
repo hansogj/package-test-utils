@@ -2,7 +2,7 @@ import { Abonnement } from "@hansogj/abonnement-js";
 
 import "@hansogj/array.utils";
 import { defined, definedList } from "@hansogj/array.utils/lib/defined";
-import find from "find-js";
+import find from "@hansogj/find-js";
 import maybe from "maybe-for-sure";
 
 import { verify } from "../../shared/verify";
@@ -32,7 +32,7 @@ export const run = () => {
   verify("li:", () =>
     find("li", window.document.body).map((e: HTMLElement) => e.innerText)
   ).toEqual([
-    "find-js",
+    "@hansogj/find-js",
     "@hansogj/array.utils",
     "maybe-for-sure",
     "@hansogj/abonnement-js",

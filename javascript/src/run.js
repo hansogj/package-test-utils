@@ -28,7 +28,7 @@ window.run = () => {
     verify("li:", () =>
         find("li", window.document.body).map((e) => e.innerText)
     ).toEqual([
-        "find-js",
+        "@hansogj/find-js",
         "@hansogj/array.utils",
         "maybe-for-sure",
         "@hansogj/abonnement-js"

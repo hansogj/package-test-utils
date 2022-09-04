@@ -37,9 +37,9 @@
         "webpack-dev-server": "^4.10.0"
     },
     "dependencies": {
-        "@hansogj/array.utils": "^1.2.0",
+        "@hansogj/array.utils": "1.2.0",
         "@hansogj/abonnement-js": "^3.0.0",
-        "find-js": "4.0.4",
+        "@hansogj/find-js": "5.1.0",
         "maybe-for-sure": "^1.4.3"
     }
 }

@@ -1,5 +1,5 @@
 const Abonnement = require("@hansogj/abonnement-js").Abonnement;
-const find = require("find-js").default;
+const find = require("@hansogj/find-js").default;
 const maybe = require("maybe-for-sure").default;
 const verify = require('../../shared/verify').verify;
 const arrayDefined = require("@hansogj/array.utils/lib/defined");
@@ -32,7 +32,7 @@ export const run = () => {
     verify("li:", () =>
         find("li", window.document.body).map((e) => e.innerText)
     ).toEqual([
-        "find-js",
+        "@hansogj/find-js",
         "@hansogj/array.utils",
         "maybe-for-sure",
         "@hansogj/abonnement-js",

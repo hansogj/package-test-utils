@@ -1,6 +1,6 @@
 const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("@hansogj/find-js").default;
-const maybe = require("maybe-for-sure").default;
+const maybe = require("@hansogj/maybe").default;
 const verify = require('../../shared/verify').verify;
 const arrayDefined = require("@hansogj/array.utils/lib/defined");
 require("@hansogj/array.utils");
@@ -34,7 +34,7 @@ export const run = () => {
     ).toEqual([
         "@hansogj/find-js",
         "@hansogj/array.utils",
-        "maybe-for-sure",
+        "maybe",
         "@hansogj/abonnement-js",
     ]);
     verify("maybe", () =>

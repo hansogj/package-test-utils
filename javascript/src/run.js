@@ -30,7 +30,7 @@ window.run = () => {
     ).toEqual([
         "@hansogj/find-js",
         "@hansogj/array.utils",
-        "maybe-for-sure",
+        "@hansogj/maybe",
         "@hansogj/abonnement-js"
     ]);
 

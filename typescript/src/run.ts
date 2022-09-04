@@ -3,7 +3,7 @@ import { Abonnement } from "@hansogj/abonnement-js";
 import "@hansogj/array.utils";
 import { defined, definedList } from "@hansogj/array.utils/lib/defined";
 import find from "@hansogj/find-js";
-import maybe from "maybe-for-sure";
+import maybe from "@hansogj/maybe";
 
 import { verify } from "../../shared/verify";
 
@@ -34,7 +34,7 @@ export const run = () => {
   ).toEqual([
     "@hansogj/find-js",
     "@hansogj/array.utils",
-    "maybe-for-sure",
+    "@hansogj/maybe",
     "@hansogj/abonnement-js",
   ]);
   verify("maybe", () =>

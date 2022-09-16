@@ -9,21 +9,31 @@ const verify = (title, test) => {
     }
     console.log(actual);
 
-  return {
-    toEqual: (expectation) => {
-      if (JSON.stringify(expectation) === actual) {
-        pre.classList.add("success");
-        pre.innerText = `>test "${title}" ran successfully:\n\t ${actual}`;
-      } else {
-        pre.classList.add("error");
-        pre.innerText = `>test ${title} ran with error: \n\texpected ${actual} to equal ${expectation}`;
-      }
-      area.appendChild(pre);
-    },
-  };
+    return {
+        toEqual: (expectation) => {
+            if (JSON.stringify(expectation) === actual) {
+                pre.classList.add("success");
+                pre.innerText = `>test "${title}" ran successfully:\n\t ${actual}`;
+            } else {
+                pre.classList.add("error");
+                pre.innerText = `>test ${title} ran with error: \n\texpected ${actual} to equal ${expectation}`;
+            }
+            area.appendChild(pre);
+        },
+        toDiffer: (expectation) => {
+            if (JSON.stringify(expectation) !== actual) {
+                pre.classList.add("success");
+                pre.innerText = `>test "${title}" ran successfully:\n\t ${actual}`;
+            } else {
+                pre.classList.add("error");
+                pre.innerText = `>test ${title} ran with error: \n\texpected ${actual} to equal ${expectation}`;
+            }
+            area.appendChild(pre);
+        }
+    };
 };
 
-try{
+try {
     module.exports.verify = verify
 } catch {
     window.verify = verify;

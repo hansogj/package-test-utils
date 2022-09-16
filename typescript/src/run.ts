@@ -6,8 +6,10 @@ import find from "@hansogj/find-js";
 import maybe from "@hansogj/maybe";
 
 import { verify } from "../../shared/verify";
+import { dependencies } from "../../shared/dependencies";
 
 export const run = () => {
+  dependencies();
   const abonnement: Abonnement<String> = new Abonnement<String>("init");
   verify("hello", () => "typescript").toEqual("typescript");
   verify("array.onEmpty", () =>
@@ -32,10 +34,10 @@ export const run = () => {
   verify("li:", () =>
     find("li", window.document.body).map((e: HTMLElement) => e.innerText)
   ).toEqual([
-    "@hansogj/find-js",
-    "@hansogj/array.utils",
-    "@hansogj/maybe",
-    "@hansogj/abonnement-js",
+    "@hansogj/abonnement-js@v3.1.0",
+    "@hansogj/array.utils@v1.3.0",
+    "@hansogj/find-js@v5.1.0",
+    "@hansogj/maybe@v2.0.1",
   ]);
   verify("maybe", () =>
     maybe(find("ul"))
@@ -45,7 +47,7 @@ export const run = () => {
   ).toEqual("UL");
 
   abonnement.abonner((val) =>
-    verify("@hansogj/abonnement", () => val).toEqual("init")
+    verify("@hansogj/abonnement", () => val).toDiffer("init ")
   );
   abonnement.varsle("oppdatert verdi");
 };

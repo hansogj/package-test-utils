@@ -3,6 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const stylesHandler = 'style-loader';
 
+const dependencies = require('../package.json').dependencies;
+
 module.exports = ({ entry, port, template }) => {
 
     return {
@@ -16,7 +18,13 @@ module.exports = ({ entry, port, template }) => {
             port,
             host: 'localhost',
         },
-        plugins: [new HtmlWebpackPlugin({ template })],
+        plugins: [new HtmlWebpackPlugin({
+            template,
+            templateParameters: {
+                dependencies: JSON.stringify(dependencies, null, 4)
+            },
+
+        })],
         mode: "development",
         module: {
 

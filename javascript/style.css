@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #1a2636;
 }
 
 body > div {
@@ -13,7 +13,7 @@ a {
 }
 
 body > div > #verification {
-  background-color: #fff;
+  background-color: #1a2636;
   color: #000;
   border-color: #6d7780;
 }

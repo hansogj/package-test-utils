@@ -2,12 +2,14 @@ const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("@hansogj/find-js").default;
 const maybe = require("@hansogj/maybe").default;
 const verify = require('../../shared/verify').verify;
+const dependencies = require('../../shared/dependencies').dependencies;
 const arrayDefined = require("@hansogj/array.utils/lib/defined");
 require("@hansogj/array.utils");
 
 const { defined, definedList } = arrayDefined;
 
 export const run = () => {
+    dependencies()
     const abonnement = new Abonnement("init");
     verify("hello", () => "commonJS").toEqual("commonJS");
     verify("array.onEmpty", () =>
@@ -32,10 +34,10 @@ export const run = () => {
     verify("li:", () =>
         find("li", window.document.body).map((e) => e.innerText)
     ).toEqual([
-        "@hansogj/find-js",
-        "@hansogj/array.utils",
-        "maybe",
-        "@hansogj/abonnement-js",
+        "@hansogj/abonnement-js@v3.1.0",
+        "@hansogj/array.utils@v1.3.0",
+        "@hansogj/find-js@v5.1.0",
+        "@hansogj/maybe@v2.0.1",
     ]);
     verify("maybe", () =>
         maybe(find("ul"))
@@ -44,6 +46,6 @@ export const run = () => {
             .valueOrExecute(() => "no ul in set")
     ).toEqual("UL");
 
-    abonnement.abonner((val) => verify("@hansogj/abonnement", () => val).toEqual("init"));
     abonnement.varsle("oppdatert verdi");
+    abonnement.abonner((val) => verify("@hansogj/abonnement", () => val).toDiffer("init"));
 };

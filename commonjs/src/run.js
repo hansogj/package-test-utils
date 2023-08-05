@@ -34,10 +34,10 @@ export const run = () => {
     verify("li:", () =>
         find("li", window.document.body).map((e) => e.innerText)
     ).toEqual([
-        "@hansogj/abonnement-js@v3.1.0",
-        "@hansogj/array.utils@v1.3.0",
-        "@hansogj/find-js@v5.1.0",
-        "@hansogj/maybe@v2.0.1",
+        "@hansogj/abonnement-js@v3.2.0",
+        "@hansogj/array.utils@v1.3.1",
+        "@hansogj/find-js@v5.1.1",
+        "@hansogj/maybe@v2.2.1",
     ]);
     verify("maybe", () =>
         maybe(find("ul"))

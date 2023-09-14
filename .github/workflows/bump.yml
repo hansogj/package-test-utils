@@ -41,7 +41,7 @@ jobs:
         id: defaultversion
         run: |
           TARGET=${{ github.event.inputs.version }}
-          echo "value=${TARGET:-"patch"}" >> "$GITHUB_OUTPUT"
+          echo "version=${TARGET:-"patch"}" >> "$GITHUB_OUTPUT"
           
       - name: Version and Package
         run: npm version ${{steps.defaultname.outputs.version }}

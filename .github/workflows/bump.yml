@@ -25,7 +25,7 @@ jobs:
     steps:
       - name: Check
         run: |
-          echo "${{secrets.OWNER}}" - "${{secrets.DEPLOY_KEY}}" - "${{OWNER}}" - "${{secrets}}" 
+          echo "${{secrets.OWNER}}" - "${{secrets.DEPLOY_KEY}}" - "${{secrets}}" 
         
       - uses: actions/checkout@v3
         with:

@@ -2,9 +2,9 @@
 name: bump version
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: ["main"]
+    types: [closed]
   workflow_dispatch:
     inputs:
       version:
@@ -23,7 +23,7 @@ jobs:
       matrix:
         node-version: [20.X]
 
-    steps:     
+    steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -35,10 +35,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Configure git
-        run: |         
+        run: |
           git config user.name "GitHubActions"
           git config user.email "${{secrets.OWNER}}"
-      
+
       - name: Set default value
         id: defaultname
         run: |
@@ -49,7 +49,7 @@ jobs:
         run: |
           name="${{ steps.defaultname.outputs.value }}"
           echo "Name: $name"
-          npm version $name --force         
+          npm version $name --force
 
       - name: Update git
         run: |

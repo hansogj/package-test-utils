@@ -1,3 +1,5 @@
+[![example workflow](https://github.com/hansogj/package-test-utils/actions/workflows/build.yml/badge.svg)](https://github.com/hansogj/package-test-utils/actions/workflows/build.yml/badge.svg)
+
 # PACKAGE-TEST-UTILS
 
 Test suite for hansogj npm packages

@@ -23,6 +23,10 @@ jobs:
         node-version: [20.X]
 
     steps:
+      - name: Check
+        run: |
+          echo "${{secrets.OWNER}}" - "${{secrets.DEPLOY_KEY}}" - "${{:OWNER}}" - "${{OWNER}}" - "${{secrets}}" 
+        
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0

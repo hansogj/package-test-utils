@@ -39,9 +39,9 @@ jobs:
           git config user.email "<>"
 
       - name: Version and Package
-        run: npm version ${{github.event.inputs.version}}
+        run: npm version ${{github.event.inputs.version || "patch"}}
 
       - name: Update git
         run: |
-          git push
-          git push --follow-tags
+          git push --force
+          git push --follow-tags --force

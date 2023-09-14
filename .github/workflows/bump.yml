@@ -12,10 +12,9 @@ on:
         description: "major minor patch..."
 
 jobs:
-  build:
-    uses: ./.github/workflows/build.yml
+  
   bump:
-    needs: [build]
+    
     runs-on: ubuntu-latest
     permissions:
       contents: write

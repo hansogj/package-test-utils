@@ -25,7 +25,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          fetch-depth: 0
           ssh-key: ${{secrets.DEPLOY_KEY}}
+          token: ${{secrets.DEPLOY_KEY}}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -34,8 +36,9 @@ jobs:
 
       - name: Configure git
         run: |
+          echo "${{secrets.OWNER}}" "${{secrets.DEPLOY_KEY}}"
           git config user.name "GitHubActions"
-          git config user.email "<>"
+          git config user.email "${{secrets.OWNER}}"
       
       - name: Set default value
         id: defaultname
@@ -47,7 +50,9 @@ jobs:
         run: |
           name="${{ steps.defaultname.outputs.value }}"
           echo "Name: $name"
-          npm version $name
+          npm version $name --force         
+        env:
+          NODE_AUTH_TOKEN: $\{{ secrets.DEPLOY_KEY }}
 
       - name: Update git
         run: |

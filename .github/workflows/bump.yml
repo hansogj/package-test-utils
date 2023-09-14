@@ -12,9 +12,10 @@ on:
         description: "major minor patch..."
 
 jobs:
-  
+  build:
+    uses: ./.github/workflows/build.yml
   bump:
-    
+    needs: [build]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -34,8 +35,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Configure git
-        run: |
-          echo "${{secrets.OWNER}}" "${{secrets.DEPLOY_KEY}}"
+        run: |         
           git config user.name "GitHubActions"
           git config user.email "${{secrets.OWNER}}"
       
@@ -50,8 +50,6 @@ jobs:
           name="${{ steps.defaultname.outputs.value }}"
           echo "Name: $name"
           npm version $name --force         
-        env:
-          NODE_AUTH_TOKEN: $\{{ secrets.DEPLOY_KEY }}
 
       - name: Update git
         run: |

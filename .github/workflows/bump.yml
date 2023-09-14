@@ -37,9 +37,15 @@ jobs:
         run: |
           git config user.name "GitHubActions"
           git config user.email "<>"
-
+      
+      - name: Set version target
+        id: defaultversion
+        run: |
+          TARGET=${{ github.event.inputs.version }}
+          echo "value=${TARGET:-"patch"}" >> "$GITHUB_OUTPUT"
+          
       - name: Version and Package
-        run: npm version ${{github.event.inputs.version || "patch"}}
+        run: npm version ${{steps.defaultname.outputs.version }}
 
       - name: Update git
         run: |

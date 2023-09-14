@@ -6,7 +6,7 @@ Test suite for hansogj npm packages
 
 ### Installation
 
-Run `npm i` to install dependencies for utility package
+Run `npm ci` to install dependencies for utility package
 
 Each folder
 

@@ -2,9 +2,9 @@ name: test & build
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request:
-    branches: ["master"]
+    branches: ["main"]
   workflow_call:
 
 jobs:
@@ -24,6 +24,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Test
         run: |
-            npm ci
-            npm run test:ts
-            npm run test:cjs
+          npm ci
+          npm run test:ts
+          npm run test:cjs

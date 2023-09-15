@@ -1,4 +1,4 @@
-name: bump version
+name: common npm bump
 
 on:
   workflow_call:

@@ -1,4 +1,4 @@
-name: common npm bump
+name: bump
 
 on:
   workflow_call:
@@ -10,7 +10,7 @@ on:
         required: true
 
 jobs:
-  common-bump:
+  bump:
     runs-on: ubuntu-latest
     permissions:
       contents: write

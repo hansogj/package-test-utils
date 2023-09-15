@@ -22,9 +22,9 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
-  common-bump:
+  bump:
     needs: [build]
-    uses: ./.github/workflows/common-bump.yml
+    uses: ./.github/shared/bump.yml
     with:
       version: ${{ github.event.inputs.version }}
     secrets:

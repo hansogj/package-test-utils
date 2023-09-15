@@ -42,9 +42,9 @@ jobs:
 
       - name: Version and Package
         run: |
-          name="${{ steps.defaultname.outputs.value }}"
-          echo "Name: $name"
-          npm version $name --force
+          version="${{ steps.defaultname.outputs.value }}"
+          echo "bumping npm version with target $version"
+          npm version $version --force
 
       - name: Update git
         run: |

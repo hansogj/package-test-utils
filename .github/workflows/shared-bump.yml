@@ -1,4 +1,4 @@
-name: common npm bump
+name: "shared bump"
 
 on:
   workflow_call:

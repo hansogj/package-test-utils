@@ -1,0 +1,52 @@
+name: bump version
+
+on:
+  workflow_call:
+    inputs:
+      version:
+        type: string
+    secrets:
+      deployKey:
+        required: true
+
+jobs:
+  common-bump:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        node-version: [20.X]
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          ssh-key: ${{ secrets.deployKey }}
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Configure git
+        run: |
+          git config user.name "GitHubActions"
+          git config user.email "<>"
+
+      - name: Set default value
+        id: defaultname
+        run: |
+          INPUT_VERSION=${{ inputs.version }}
+          echo "value=${INPUT_VERSION:-"patch"}" >> "$GITHUB_OUTPUT"
+
+      - name: Version and Package
+        run: |
+          name="${{ steps.defaultname.outputs.value }}"
+          echo "Name: $name"
+          npm version $name --force
+
+      - name: Update git
+        run: |
+          git push --force
+          git push --follow-tags --force

@@ -1,0 +1,13 @@
+{
+  "name": "package-test-utils-javascript",
+  "author": "@hansogj",
+  "version": "1.0.0",
+  "scripts": {
+    "preserve": "ln -sf ../../node_modules/@hansogj . && ln -sf ../../shared .",
+    "serve": "http-server -p 2112 ",
+    "test": "echo \"Error: no test specified\""
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "package-test-utils-shared",
+  "version": "1.0.0",
+  "author": "@hansogj",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "module": "src/index.js",
+  "files": [
+    "src",
+    "webpack.*"
+  ],
+  "scripts": {
+    "serve": "webpack serve --config ./webpack.config.js",
+    "test": "echo \"Error: no test specified\" "
+  }
+}

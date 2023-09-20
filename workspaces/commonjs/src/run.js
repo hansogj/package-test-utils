@@ -1,4 +1,4 @@
-const { suite, dependencies, verify } = require('../../shared');
+const { suite, dependencies, verify } = require('shared');
 const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("@hansogj/find-js").default;
 const maybe = require("@hansogj/maybe").default;

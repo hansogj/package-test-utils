@@ -1,4 +1,4 @@
-@import '../shared/style.css';
+@import '/shared/style/index.css';
 
 body {
     background-color: var(--blue-dark);

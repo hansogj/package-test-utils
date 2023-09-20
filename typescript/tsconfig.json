@@ -1,16 +1,22 @@
 {
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution" : "node",
-    "noImplicitAny": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "lib" :["dom", "DOM.Iterable", "es6", "es5", "es2019"],
-    "allowJs": true
-  },
-  "files": [
-      "src/index.ts",      
-      "src/run.ts",      
-      "src/run.spec.ts"      
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "ESNext",
+        "lib": [
+            "dom",
+            "DOM.Iterable",
+            "es6",
+            "es5",
+            "es2019"
+        ],
+        "allowJs": true
+    },
+    "files": [
+        "src/index.ts",
+        "src/run.ts",
+        "src/run.spec.ts"
     ]
 }

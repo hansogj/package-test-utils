@@ -1,9 +1,14 @@
+@import '../../shared/style.css';
 body > div {
-  background-color: #91ff8c;
-  color: #1a2636;
-  box-shadow: 5px 5px 15px #2e4358b9;
+    background-color: var(--green-weird);
+    color: var(--blue-dark);
+    box-shadow: 5px 5px 15px var(--green-dark);
+}
+
+body > div > #verification {
+    border-color: var(--green-dark);
 }
 
 a {
-  color: #1a2636;
+    color: var(--blue-dark);
 }

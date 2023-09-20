@@ -1,51 +1,48 @@
+const { suite, dependencies, verify } = require('../../shared');
 const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("@hansogj/find-js").default;
 const maybe = require("@hansogj/maybe").default;
-const verify = require('../../shared/verify').verify;
-const dependencies = require('../../shared/dependencies').dependencies;
-const arrayDefined = require("@hansogj/array.utils/lib/defined");
+const arrayDefined = require("@hansogj/array.utils");
 require("@hansogj/array.utils");
 
 const { defined, definedList } = arrayDefined;
 
 export const run = () => {
-    dependencies()
-    const abonnement = new Abonnement("init");
-    verify("hello", () => "commonJS").toEqual("commonJS");
-    verify("array.onEmpty", () =>
-        [].onEmpty((o) => o.push("is empty")).shift()
-    ).toEqual("is empty");
-    verify("array.onEmpty", () =>
-        ["is not empty"].onEmpty((o) => o.push("is empty")).shift()
-    ).toEqual("is not empty");
-    verify("array defined", () =>
-        [null, false, undefined, 0, 1].defined()
-    ).toEqual([0, 1]);
-    verify("definedList", () =>
-        definedList([null, false, undefined, 0, 1])
-    ).toEqual([0, 1]);
-    verify("defined", () => [defined(null), defined(""), defined(true)]).toEqual([
-        false,
-        false,
-        true,
-    ]);
-    verify("allDefined", () => [false, true].allDefined()).toEqual([]);
-    verify("array first", () => ["first", "second"].first()).toEqual(["first"]);
-    verify("li:", () =>
-        find("li", window.document.body).map((e) => e.innerText)
-    ).toEqual([
-        "@hansogj/abonnement-js@v3.2.0",
-        "@hansogj/array.utils@v1.3.1",
-        "@hansogj/find-js@v5.1.1",
-        "@hansogj/maybe@v2.2.1",
-    ]);
-    verify("maybe", () =>
-        maybe(find("ul"))
-            .map((it) => it.first().shift())
-            .map((it) => it.nodeName)
-            .valueOrExecute(() => "no ul in set")
-    ).toEqual("UL");
 
-    abonnement.varsle("oppdatert verdi");
-    abonnement.abonner((val) => verify("@hansogj/abonnement", () => val).toDiffer("init"));
+    suite("Module include ")
+        .before(dependencies)
+        .test("hello void", () => verify("hello", () => "commonJS").toEqual("commonJS"))
+        .test("array.onEmpty", () => {
+            verify("[] should be empty]", () => [].onEmpty((o) => o.push("is empty")).shift()).toEqual("is empty");
+            verify("[\"is not empty\"] should not be empty", () => ["is not empty"].onEmpty((o) => o.push("is empty")).shift()).toEqual("is not empty");
+        })
+        .test("array.defined", () => {
+            verify("should filter out defined elements on array", () => [null, false, undefined, 0, 1].defined()).toEqual([0, 1]);
+            verify("should filter out defined elements from array", () => definedList([null, false, undefined, 0, 1])).toEqual([0, 1]);
+            verify("defined", () => [defined(null), defined(""), defined(true)]).toEqual([false, false, true,]);
+            verify("allDefined", () => [false, true].allDefined()).toEqual([]);
+            verify("array first", () => ["first", "second"].first()).toEqual(["first"]);
+        }).test("find.js", () => {
+
+            verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual([
+                "@hansogj/abonnement-js@vfile:../utils-ws/hansogj-abonnement-js-4.0.0-0.tgz",
+                "@hansogj/array.utils@vfile:../utils-ws/hansogj-array.utils-2.0.0-0.tgz",
+                "@hansogj/find-js@vfile:../utils-ws/hansogj-find-js-5.1.3-0.tgz",
+                "@hansogj/maybe@v2.2.1",
+            ]);
+        }).test("maybe", () => {
+            verify("maybe should filter defined elements", () =>
+                maybe(find("ul"))
+                    .map((it) => it.first().shift())
+                    .map((it) => it.nodeName)
+                    .valueOrExecute(() => "no ul in set")
+            ).toEqual("UL");
+        }).test("abonnement", () => {
+            const abonnement = new Abonnement("init");
+            abonnement.varsle("oppdatert verdi");
+            abonnement.abonner((val) => verify("@hansogj/abonnement", () => val).toDiffer("init"));
+        })
+
+        .after((numberOfTests) => verify('expect to have ran 6 tests', () => numberOfTests).toEqual(6));
+
 };

@@ -4,7 +4,7 @@ import '@hansogj/array.utils';
 import { defined, definedList } from '@hansogj/array.utils';
 import find from '@hansogj/find-js';
 import maybe from '@hansogj/maybe';
-import { dependencies, suite, verify } from '../../shared';
+import { dependencies, suite, verify } from 'shared';
 
 export const run = () => {
     suite('Module include')

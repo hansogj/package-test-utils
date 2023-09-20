@@ -1,4 +1,4 @@
-@import '../../shared/style.css';
+@import '~shared/style';
 body > div {
     background-color: var(--green-weird);
     color: var(--blue-dark);

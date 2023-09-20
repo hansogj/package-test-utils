@@ -1,5 +1,5 @@
 const path = require('path');
-const commonConfig = require('../shared/webpack.common.config');
+const commonConfig = require('shared/webpack.common.config')
 
 const root = path.resolve(__dirname);
 const tsLoader = {

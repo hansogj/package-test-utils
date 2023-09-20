@@ -14,22 +14,22 @@
     "post:update": "rm -rfv node_modules && npm i --progress"
   },
   "devDependencies": {
-    "@babel/core": "7.22.11",
-    "@babel/preset-env": "7.22.14",
-    "@babel/preset-typescript": "7.22.11",
-    "@types/jest": "29.5.4",
+    "@babel/core": "7.22.20",
+    "@babel/preset-env": "7.22.20",
+    "@babel/preset-typescript": "7.22.15",
+    "@types/jest": "29.5.5",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "29.6.4",
+    "babel-jest": "29.7.0",
     "babel-loader": "8.3.0",
     "babel-preset-env": "7.0.0-beta.3",
     "css-loader": "6.8.1",
     "html-webpack-plugin": "5.5.3",
-    "jest": "29.6.4",
-    "jest-environment-jsdom": "29.6.4",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
     "jsdom": "20.0.3",
     "prettier": "2.8.8",
     "raw-loader": "4.0.2",
-    "sass": "1.66.1",
+    "sass": "1.67.0",
     "sass-loader": "13.3.2",
     "style-loader": "3.3.3",
     "ts-loader": "9.4.4",
@@ -40,9 +40,9 @@
     "webpack-dev-server": "4.15.1"
   },
   "dependencies": {
-    "@hansogj/abonnement-js": "4.0.0-0",
-    "@hansogj/array.utils": "2.0.0-0",
-    "@hansogj/find-js": "6.0.0-0",
+    "@hansogj/abonnement-js": "4.0.0",
+    "@hansogj/array.utils": "2.0.0",
+    "@hansogj/find-js": "6.0.0",
     "@hansogj/maybe": "2.2.1"
   }
 }

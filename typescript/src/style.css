@@ -1,11 +1,10 @@
-
+@import '../../shared/style.css';
 body > div {
-   background-color: #1a2636;
-   color: #8ccdff;
-   box-shadow: 5px 5px 15px #1b365194;
+    background-color: var(--blue-dark);
+    color: var(--blue-xtra-light);
+    box-shadow: 5px 5px 15px #1b365194;
 }
 
 a {
-    color: #8ccdff;
-  }
-
+    color: var(--blue-xtra-light);
+}

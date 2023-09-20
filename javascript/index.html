@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>[TestUtil: Dinosaur JS]</title>
-    <script src="../node_modules/@hansogj/find-js/dist/find.js"></script>
-    <script src="../node_modules/@hansogj/array.utils/lib/index.js"></script>
-    <script src="../node_modules/@hansogj/array.utils/lib/defined/index.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <title>[TestUtil: Dinosaur JS]</title>
+        <script src="../node_modules/@hansogj/find-js/dist/index.js"></script>
+        <script src="../node_modules/@hansogj/array.utils/dist/index.js"></script>
+        <script src="../node_modules/@hansogj/array.utils/dist/defined/index.js"></script>
+        <script src="../node_modules/@hansogj/maybe/dist/maybe.js"></script>
+        <link href="./style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div>
+            <h1>Dinosaur Javascript!</h1>
 
-    <script src="../node_modules/@hansogj/maybe/dist/maybe.js"></script>
-    <link href="../shared/style.css" rel="stylesheet" />
-    <link href="./style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div>
-      <h1>Dinosaur Javascript!</h1>
+            <ul>
+                <li>
+                    <a href="https://www.npmjs.com/package/@hansogj/find-js">@hansogj/find-js</a>
+                </li>
+                <li>
+                    <a href="https://www.npmjs.com/package/@hansogj/array.utils">@hansogj/array.utils</a>
+                </li>
+                <li>
+                    <a href="https://www.npmjs.com/package/@hansogj/maybe">@hansogj/maybe</a>
+                </li>
+                <li>
+                    <a href="https://www.npmjs.com/package/@hansogj/abonnement-js">@hansogj/abonnement-js</a>
+                </li>
+            </ul>
 
-      <ul>
-        <li>
-          <a href="https://www.npmjs.com/package/@hansogj/find-js"
-            >@hansogj/find-js</a
-          >
-        </li>
-        <li>
-          <a href="https://www.npmjs.com/package/@hansogj/array.utils"
-            >@hansogj/array.utils</a
-          >
-        </li>
-        <li>
-          <a href="https://www.npmjs.com/package/@hansogj/maybe"
-            >@hansogj/maybe</a
-          >
-        </li>
-        <li>
-          <a href="https://www.npmjs.com/package/@hansogj/abonnement-js"
-            >@hansogj/abonnement-js</a
-          >
-        </li>
-      </ul>
+            <div id="verification"></div>
+        </div>
+    </body>
 
-      <div id="verification"></div>
-    </div>
-  </body>
-
-  <script src="../shared/verify.js"></script>
-  <script src="./src/run.js"></script>
-  <script type="text/javascript">
-    window.run();
-  </script>
+    <script src="../shared/verify.js"></script>
+    <script src="../shared/test.suite.js"></script>
+    <script src="./src/run.js"></script>
+    <script type="text/javascript">
+        window.run();
+    </script>
 </html>

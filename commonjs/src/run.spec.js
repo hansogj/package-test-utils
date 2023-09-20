@@ -5,7 +5,7 @@
 
 import { jest } from '@jest/globals';
 import { Abonnement } from "@hansogj/abonnement-js";
-import { definedList } from "@hansogj/array.utils/lib/defined";
+import { definedList } from "@hansogj/array.utils";
 import "@hansogj/array.utils";
 import find from '@hansogj/find-js';
 
@@ -53,7 +53,12 @@ describe("javascripts", () => {
         it("is defined", () => expect(array.defined).toBeDefined());
 
         it("has length", () => expect(array.defined()).toHaveLength(2));
-        it("has length", () => expect(definedList(array)).toHaveLength(2));
+        it("has length", () => {
+            debugger
+
+            definedList(array)
+            expect(definedList(array)).toHaveLength(2);
+        });
 
         it("all defined", () => expect(array.allDefined()).toEqual([]));
 

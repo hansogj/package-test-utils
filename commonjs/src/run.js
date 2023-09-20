@@ -25,9 +25,9 @@ export const run = () => {
         }).test("find.js", () => {
 
             verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual([
-                "@hansogj/abonnement-js@vfile:../utils-ws/hansogj-abonnement-js-4.0.0-0.tgz",
-                "@hansogj/array.utils@vfile:../utils-ws/hansogj-array.utils-2.0.0-0.tgz",
-                "@hansogj/find-js@vfile:../utils-ws/hansogj-find-js-5.1.3-0.tgz",
+                "@hansogj/abonnement-js@v4.0.0-0",
+                "@hansogj/array.utils@v2.0.0-0",
+                "@hansogj/find-js@v6.0.0-0",
                 "@hansogj/maybe@v2.2.1",
             ]);
         }).test("maybe", () => {

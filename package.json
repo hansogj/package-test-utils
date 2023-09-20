@@ -40,9 +40,9 @@
     "webpack-dev-server": "4.15.1"
   },
   "dependencies": {
-    "@hansogj/abonnement-js": "file:../utils-ws/hansogj-abonnement-js-4.0.0-0.tgz",
-    "@hansogj/array.utils": "file:../utils-ws/hansogj-array.utils-2.0.0-0.tgz",
-    "@hansogj/find-js": "file:../utils-ws/hansogj-find-js-5.1.3-0.tgz",
+    "@hansogj/abonnement-js": "4.0.0-0",
+    "@hansogj/array.utils": "2.0.0-0",
+    "@hansogj/find-js": "6.0.0-0",
     "@hansogj/maybe": "2.2.1"
   }
 }

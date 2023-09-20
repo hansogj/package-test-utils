@@ -14,15 +14,15 @@ export const run = () => {
         .test('array.onEmpty', () => {
             verify('[] should be empty]', () => [].onEmpty((o: any) => o.push('is empty')).shift()).toEqual('is empty');
             verify('["is not empty"] should not be empty', () =>
-                ['is not empty'].onEmpty((o: any) => o.push('is empty')).shift(),
+                ['is not empty'].onEmpty((o: any) => o.push('is empty')).shift()
             ).toEqual('is not empty');
         })
         .test('array.defined', () => {
             verify('should filter out defined elements on array', () =>
-                [null, false, undefined, 0, 1].defined(),
+                [null, false, undefined, 0, 1].defined()
             ).toEqual([0, 1]);
             verify('should filter out defined elements from array', () =>
-                definedList([null, false, undefined, 0, 1]),
+                definedList([null, false, undefined, 0, 1])
             ).toEqual([0, 1]);
             verify('defined', () => [defined(null), defined(''), defined(true)]).toEqual([false, false, true]);
             verify('allDefined', () => [false, true].allDefined()).toEqual([]);
@@ -30,9 +30,9 @@ export const run = () => {
         })
         .test('find.js', () => {
             verify('li:', () => find('li', window.document.body).map((e: HTMLElement) => e.innerText)).toEqual([
-                '@hansogj/abonnement-js@vfile:../utils-ws/hansogj-abonnement-js-4.0.0-0.tgz',
-                '@hansogj/array.utils@vfile:../utils-ws/hansogj-array.utils-2.0.0-0.tgz',
-                '@hansogj/find-js@vfile:../utils-ws/hansogj-find-js-5.1.3-0.tgz',
+                '@hansogj/abonnement-js@v4.0.0-0',
+                '@hansogj/array.utils@v2.0.0-0',
+                '@hansogj/find-js@v6.0.0-0',
                 '@hansogj/maybe@v2.2.1',
             ]);
         })
@@ -41,7 +41,7 @@ export const run = () => {
                 maybe(find('ul'))
                     .map((it: HTMLElement[]) => it.first().shift())
                     .map((it) => it.nodeName)
-                    .valueOrExecute(() => 'no ul in set'),
+                    .valueOrExecute(() => 'no ul in set')
             ).toEqual('UL');
         })
         .test('abonnement', () => {

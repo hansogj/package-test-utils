@@ -7,9 +7,12 @@
     "./shared"
   ],
   "scripts": {
+    "prepare": "husky install",
+    "pre-commit": "npm run test:ts && npm run test:cjs",
     "ws:test": "npm run test --ws",
     "serve:js": "npm run serve --workspace=package-test-utils-javascript",
     "serve:ts": "npm run serve --workspace=package-test-utils-typescript",
+    "serve:all": "/usr/bin/terminator -u -l ptu 2> /dev/null > /dev/null &",
     "test:ts": "npm run test --workspace=package-test-utils-typescript",
     "test:ts:watch": "npm run test:watch --workspace=package-test-utils-typescript",
     "serve:cjs": "npm run serve --workspace=package-test-utils-commonjs",
@@ -40,12 +43,13 @@
     "style-loader": "3.3.3",
     "webpack": "5.88.2",
     "webpack-cli": "5.1.4",
-    "webpack-dev-server": "4.15.1"
+    "webpack-dev-server": "4.15.1",
+    "husky": "8.0.3"
   },
   "dependencies": {
     "@hansogj/abonnement-js": "4.0.0",
     "@hansogj/array.utils": "2.0.0",
     "@hansogj/find-js": "6.0.0",
-    "@hansogj/maybe": "2.2.6"
+    "@hansogj/maybe": "2.2.8"
   }
 }

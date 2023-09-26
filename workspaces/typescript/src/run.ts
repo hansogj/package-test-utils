@@ -33,7 +33,7 @@ export const run = () => {
                 '@hansogj/abonnement-js@v4.0.0',
                 '@hansogj/array.utils@v2.0.0',
                 '@hansogj/find-js@v6.0.0',
-                '@hansogj/maybe@v2.2.1',
+                '@hansogj/maybe@v2.2.8',
             ]);
         })
         .test('maybe', () => {

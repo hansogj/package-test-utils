@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "precommit": "npm run test:ts && npm run test:cjs",
+    "pre-commit": "npm run test:ts && npm run test:cjs",
     "ws:test": "npm run test --ws",
     "serve:js": "npm run serve --workspace=package-test-utils-javascript",
     "serve:ts": "npm run serve --workspace=package-test-utils-typescript",

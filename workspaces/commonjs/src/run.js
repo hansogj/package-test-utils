@@ -28,7 +28,7 @@ export const run = () => {
                 '@hansogj/abonnement-js@v4.1.0',
                 '@hansogj/array.utils@v2.1.0',
                 '@hansogj/find-js@v6.1.0',
-                '@hansogj/maybe@v2.2.11',
+                '@hansogj/maybe@v2.2.12',
             ]);
         }).test("maybe", () => {
             verify("maybe should filter defined elements", () =>

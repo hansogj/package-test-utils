@@ -1,4 +1,4 @@
-const { suite, dependencies, verify } = require('shared');
+const { suite, dependencies, verify, versions } = require('shared');
 const Abonnement = require("@hansogj/abonnement-js").Abonnement;
 const find = require("@hansogj/find-js").default;
 const maybe = require("@hansogj/maybe").default;
@@ -22,15 +22,10 @@ export const run = () => {
             verify("defined", () => [defined(null), defined(""), defined(true)]).toEqual([false, false, true,]);
             verify("allDefined", () => [false, true].allDefined()).toEqual([]);
             verify("array first", () => ["first", "second"].first()).toEqual(["first"]);
-        }).test("find.js", () => {
-
-            verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual([
-                '@hansogj/abonnement-js@v4.1.0',
-                '@hansogj/array.utils@v2.1.0',
-                '@hansogj/find-js@v6.1.0',
-                '@hansogj/maybe@v2.2.12',
-            ]);
-        }).test("maybe", () => {
+        })
+        .test("find.js", () =>
+            verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual(versions))
+        .test("maybe", () => {
             verify("maybe should filter defined elements", () =>
                 maybe(find("ul"))
                     .map((it) => it.first().shift())

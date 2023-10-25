@@ -4,7 +4,7 @@ import '@hansogj/array.utils';
 import { defined, definedList } from '@hansogj/array.utils';
 import find from '@hansogj/find-js';
 import maybe from '@hansogj/maybe';
-import { dependencies, suite, verify } from 'shared';
+import { dependencies, suite, verify, versions } from 'shared';
 
 export const run = () => {
   suite('Module include')
@@ -28,14 +28,9 @@ export const run = () => {
       verify('allDefined', () => [false, true].allDefined()).toEqual([]);
       verify('array first', () => ['first', 'second'].first()).toEqual(['first']);
     })
-    .test('find.js', () => {
-      verify('li:', () => find('li', window.document.body).map((e: HTMLElement) => e.innerText)).toEqual([
-        '@hansogj/abonnement-js@v4.1.0',
-        '@hansogj/array.utils@v2.1.0',
-        '@hansogj/find-js@v6.1.0',
-        '@hansogj/maybe@v2.2.12',
-      ]);
-    })
+    .test('find.js', () =>
+      verify('li:', () => find('li', window.document.body).map((e: HTMLElement) => e.innerText)).toEqual(versions)
+    )
     .test('maybe', () => {
       verify('maybe should filter defined elements', () =>
         maybe(find('ul'))

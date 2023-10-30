@@ -50,6 +50,6 @@
     "@hansogj/abonnement-js": "4.1.0",
     "@hansogj/array.utils": "2.1.0",
     "@hansogj/find-js": "6.1.0",
-    "@hansogj/maybe": "2.2.14"
+    "@hansogj/maybe": "2.2.16"
   }
 }

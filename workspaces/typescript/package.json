@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "webpack serve --config ./webpack.config.js",
     "test": "jest --config=./jest.config.ts",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "pnpm run test --watchAll"
   },
   "dependencies": {
     "shared": "file:../../shared"

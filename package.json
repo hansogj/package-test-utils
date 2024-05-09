@@ -47,9 +47,15 @@
     "webpack-dev-server": "4.15.1"
   },
   "dependencies": {
-    "@hansogj/abonnement-js": "4.1.0",
-    "@hansogj/array.utils": "2.1.0",
-    "@hansogj/find-js": "6.1.0",
-    "@hansogj/maybe": "2.2.14"
+    "@hansogj/abonnement-js": "4.3.0",
+    "@hansogj/array.utils": "2.3.0",
+    "@hansogj/find-js": "6.3.0",
+    "@hansogj/maybe": "2.2.23"
+  },
+  "engines": {
+    "node": "^18 || ^20 || ^ 21"
+  },
+  "volta": {
+    "node": "21.7.3"
   }
 }

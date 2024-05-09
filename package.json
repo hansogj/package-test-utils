@@ -2,24 +2,21 @@
   "version": "1.3.18",
   "description": "package-test-utils-ts",
   "name": "package-test-utils-ts",
-  "workspaces": [
-    "./workspaces/*",
-    "./shared"
-  ],
   "scripts": {
-    "pre-commit": "npm run test:ts && npm run test:cjs",
-    "ws:test": "npm run test --ws",
-    "serve:js": "npm run serve --workspace=package-test-utils-javascript",
-    "serve:ts": "npm run serve --workspace=package-test-utils-typescript",
+    "preinstall": "npx only-allow pnpm",
+    "pre-commit": "pnpm run test:ts && npm run test:cjs",
+    "ws:test": "pnpm -parallel --filter=package-test-utils-typescript --filter=package-test-utils-commonjs run test ",
+    "serve:js": "pnpm --filter=package-test-utils-javascript run serve ",
+    "serve:ts": "pnpm --filter=package-test-utils-typescript run serve ",
     "serve:all": "/usr/bin/terminator -u -l ptu 2> /dev/null > /dev/null &",
-    "test:ts": "npm run test --workspace=package-test-utils-typescript",
-    "test:ts:watch": "npm run test:watch --workspace=package-test-utils-typescript",
-    "serve:cjs": "npm run serve --workspace=package-test-utils-commonjs",
-    "test:cjs": "npm run test --workspace=package-test-utils-commonjs",
-    "test:cjs:watch": "npm run test:watch --workspace=package-test-utils-commonjs",
+    "test:ts": "pnpm --filter=package-test-utils-typescript run test ",
+    "test:ts:watch": "pnpm --filter=package-test-utils-typescript run test:watch ",
+    "serve:cjs": "pnpm --filter=package-test-utils-commonjs run serve ",
+    "test:cjs": "pnpm --filter=package-test-utils-commonjs run test ",
+    "test:cjs:watch": "pnpm --filter=package-test-utils-commonjs run test:watch ",
     "update": "npx npm-check-updates -i -t minor && npm run post:update",
     "update:majors": "npx npm-check-updates -i -t latest && npm run post:update",
-    "post:update": "rm -rfv node_modules && npm i --progress"
+    "post:update": "rm -rfv node_modules && pnpm i"
   },
   "devDependencies": {
     "@babel/core": "7.24.5",

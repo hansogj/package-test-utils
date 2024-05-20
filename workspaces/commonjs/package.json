@@ -8,6 +8,10 @@
     "test:watch": "pnpm run test --watchAll"
   },
   "dependencies": {
+    "@hansogj/abonnement-js": "4.3.0",
+    "@hansogj/array.utils": "2.3.0",
+    "@hansogj/find-js": "6.3.0",
+    "@hansogj/maybe": "2.2.23",
     "shared": "file:../../shared"
   }
 }

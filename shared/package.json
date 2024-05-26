@@ -1,5 +1,5 @@
 {
-  "name": "package-test-utils-shared",
+  "name": "shared",
   "version": "1.0.0",
   "author": "@hansogj",
   "main": "src/index.js",

@@ -2,24 +2,15 @@
   "version": "1.3.18",
   "description": "package-test-utils-ts",
   "name": "package-test-utils-ts",
-  "workspaces": [
-    "./workspaces/*",
-    "./shared"
-  ],
+  "preinstall": "npx only-allow pnpm",
   "scripts": {
-    "pre-commit": "npm run test:ts && npm run test:cjs",
-    "ws:test": "npm run test --ws",
-    "serve:js": "npm run serve --workspace=package-test-utils-javascript",
-    "serve:ts": "npm run serve --workspace=package-test-utils-typescript",
+    "web-ts": "pnpm --filter package-test-utils-typescript",
+    "web-cs": "pnpm --filter package-test-utils-commonjs",
+    "web-js": "pnpm --filter package-test-utils-javascript",
+    "test": "pnpm -r test",
     "serve:all": "/usr/bin/terminator -u -l ptu 2> /dev/null > /dev/null &",
-    "test:ts": "npm run test --workspace=package-test-utils-typescript",
-    "test:ts:watch": "npm run test:watch --workspace=package-test-utils-typescript",
-    "serve:cjs": "npm run serve --workspace=package-test-utils-commonjs",
-    "test:cjs": "npm run test --workspace=package-test-utils-commonjs",
-    "test:cjs:watch": "npm run test:watch --workspace=package-test-utils-commonjs",
-    "update": "npx npm-check-updates -i -t minor && npm run post:update",
-    "update:majors": "npx npm-check-updates -i -t latest && npm run post:update",
-    "post:update": "rm -rfv node_modules && npm i --progress"
+    "update": "npx npm-check-updates -i -t minor",
+    "update:majors": "npx npm-check-updates -i -t latest"
   },
   "devDependencies": {
     "@babel/core": "7.24.5",

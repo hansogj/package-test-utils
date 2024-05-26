@@ -1,0 +1,4 @@
+packages:
+  - 'workspaces/**'
+  - 'shared'
+  - '!**/dist/**'

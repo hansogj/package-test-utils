@@ -3,12 +3,14 @@
   "author": "@hansogj",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "webpack --config ./webpack.config.js",
     "serve": "webpack serve --config ./webpack.config.js",
     "test": "jest --config=./jest.config.ts",
-    "test:watch": "npm run test -- --watchAll"
+    "test:watch": "pnpm run test --watchAll"
   },
   "dependencies": {
-    "shared": "file:../../shared"
+    "shared": "workspace:*"
   },
   "devDependencies": {
     "ts-loader": "9.5.1",

@@ -6,7 +6,7 @@ Test suite for hansogj npm packages
 
 ### Installation
 
-Run `npm ci` to install dependencies for utility package
+Run `pnpm i --frozen-lockfile` to install dependencies for utility package
 
 Each folder
 
@@ -22,10 +22,10 @@ contains scripts and html-templates needed to verify the different packages pull
 
 ### Run
 
-Commands `npm run serve:cjs` && `npm run serve:js` && `npm run serve:ts` run the webpack server for commonjs and typescript, respectively. Likewise, `npm run test:cjs:watch` && `npm run test:ts:watch` will run tests for the two modes.
+Commands `pnpm web-cjs serve` && `pnpm web-js serve` && `pnpm web-ts serve` run the webpack server for commonjs and typescript, respectively. Likewise, `pnpm web-cjs run test:watch` && `pnpm web-ts run test:watch` will run tests for the two modes.
 
 To verify the packages open in you favorite browser
 
--   [http://localhost:4114/](http://localhost:4114/)
--   [http://localhost:3113/](http://localhost:3113/)
--   [http://localhost:2112/](http://localhost:2112/)
+- [http://localhost:4114/](http://localhost:4114/)
+- [http://localhost:3113/](http://localhost:3113/)
+- [http://localhost:2112/](http://localhost:2112/)

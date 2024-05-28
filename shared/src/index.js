@@ -9,6 +9,7 @@ const shared = {
         '@hansogj/array.utils@v2.3.0',
         '@hansogj/find-js@v6.3.0',
         '@hansogj/maybe@v2.2.23',
+        "http-server@v14.1.1"
     ]
 }
 

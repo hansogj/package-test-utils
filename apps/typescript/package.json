@@ -6,6 +6,7 @@
     "clean": "rm -rf dist",
     "build": "webpack --config ./webpack.config.js",
     "serve": "webpack serve --config ./webpack.config.js",
+    "start": "http-server -p 3113 dist ",
     "test": "jest --config=./jest.config.ts",
     "test:watch": "pnpm run test --watchAll"
   },

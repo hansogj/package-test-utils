@@ -14,4 +14,6 @@ const config = commonConfig({
     template: `${root}/index.html`,
 });
 config.module.rules.push(tsLoader);
+
+config.output.path = path.resolve(__dirname, 'dist');
 module.exports = config;

@@ -88,15 +88,13 @@ importers:
         specifier: 5.0.4
         version: 5.0.4(webpack-cli@5.1.4)(webpack@5.91.0)
 
-  shared: {}
-
-  workspaces/commonjs:
+  apps/commonjs:
     dependencies:
       shared:
         specifier: workspace:*
         version: link:../../shared
 
-  workspaces/javascript:
+  apps/javascript:
     dependencies:
       shared:
         specifier: workspace:*
@@ -106,7 +104,7 @@ importers:
         specifier: ^14.1.1
         version: 14.1.1
 
-  workspaces/typescript:
+  apps/typescript:
     dependencies:
       shared:
         specifier: workspace:*
@@ -121,6 +119,8 @@ importers:
       typescript:
         specifier: 5.4.5
         version: 5.4.5
+
+  shared: {}
 
 packages:
 

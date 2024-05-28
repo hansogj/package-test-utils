@@ -1,10 +1,10 @@
 {
-  "name": "package-test-utils-javascript",
+  "name": "web-js",
   "author": "@hansogj",
   "version": "1.0.0",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm run clean && mkdir dist && cp ../../node_modules/@hansogj node_modules/shared index.html style.css src/ dist/. -R",
+    "build": "pnpm run clean && mkdir dist && cp -rL ../../node_modules/@hansogj node_modules/shared dist && cp index.html style.css src/ dist/. -R",
     "preserve": "pnpm build",
     "serve": "http-server -p 2112 dist ",
     "test": "echo \"Error: no test specified\""

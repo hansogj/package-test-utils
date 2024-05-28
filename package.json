@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "package-test-utils-ts",
   "name": "package-test-utils-ts",
   "preinstall": "npx only-allow pnpm",
@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.24.5",
-    "@babel/preset-env": "7.24.5",
+    "@babel/preset-env": "7.24.6",
     "@babel/preset-typescript": "7.24.1",
     "@types/jest": "29.5.12",
     "babel-core": "7.0.0-bridge.0",

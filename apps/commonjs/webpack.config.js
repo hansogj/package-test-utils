@@ -7,5 +7,5 @@ const config = commonConfig({
     entry: `${root}/src/index.js`,
     template: `${root}/index.html`,
 });
-
+config.output.path = path.resolve(__dirname, 'dist');
 module.exports = config;

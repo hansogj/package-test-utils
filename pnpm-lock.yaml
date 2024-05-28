@@ -20,6 +20,9 @@ importers:
       '@hansogj/maybe':
         specifier: 2.2.23
         version: 2.2.23
+      http-server:
+        specifier: 14.1.1
+        version: 14.1.1
     devDependencies:
       '@babel/core':
         specifier: 7.24.5
@@ -99,10 +102,6 @@ importers:
       shared:
         specifier: workspace:*
         version: link:../../shared
-    devDependencies:
-      http-server:
-        specifier: ^14.1.1
-        version: 14.1.1
 
   apps/typescript:
     dependencies:

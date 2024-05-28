@@ -4,6 +4,7 @@
   "name": "package-test-utils-ts",
   "preinstall": "npx only-allow pnpm",
   "scripts": {
+    "docker:clean": "docker image rm -f web-js web-cs web-ts",
     "web-ts": "pnpm --filter web-ts",
     "web-cs": "pnpm --filter web-cs",
     "web-js": "pnpm --filter web-js",
@@ -40,7 +41,8 @@
     "@hansogj/abonnement-js": "4.3.0",
     "@hansogj/array.utils": "2.3.0",
     "@hansogj/find-js": "6.3.0",
-    "@hansogj/maybe": "2.2.23"
+    "@hansogj/maybe": "2.2.23",
+    "http-server": "14.1.1"
   },
   "engines": {
     "node": "^18 || ^20 || ^ 21"

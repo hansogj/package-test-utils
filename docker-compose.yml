@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  web-js:
+    build:
+      context: .
+      target: web-js
+    image: web-js:latest
+    ports:
+      - '2112:2112'
+  web-ts:
+    build:
+      context: .
+      target: web-ts
+    image: web-ts:latest
+    ports:
+      - '3113:3113'
+
+  web-cs:
+    build:
+      context: .
+      target: web-cs
+    image: web-cs:latest
+    ports:
+      - '4114:4114'

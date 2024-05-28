@@ -6,12 +6,12 @@ Test suite for hansogj npm packages
 
 ### Installation
 
-Run `pnpm i --frozen-lockfile` to install dependencies for utility package
+Run `pnpm i --frozen-lockfile` to install dependencies for utility package, and then `pnpm -r build ` to build all workspaces
 
 Each folder
 
 ```bash
-workspaces/
+apps/
 ├── commonjs
 ├── javascript
 └── typescript
@@ -22,9 +22,13 @@ contains scripts and html-templates needed to verify the different packages pull
 
 ### Run
 
-Commands `pnpm web-cjs serve` && `pnpm web-js serve` && `pnpm web-ts serve` run the webpack server for commonjs and typescript, respectively. Likewise, `pnpm web-cjs run test:watch` && `pnpm web-ts run test:watch` will run tests for the two modes.
+Commands `pnpm web-cjs serve` && `pnpm web-js serve` && `pnpm web-ts serve` runs the webpack server for commonjs and typescript, respectively. Likewise, `pnpm web-cjs run test:watch` && `pnpm web-ts run test:watch` will run tests for the two modes.
 
 To verify the packages open in you favorite browser
+
+### Docker
+
+There is also a [Dockerfile](Dockerfile) and a [docker-compose.yml](docker-compose.yml) that will run the three servers in separate containers. Just wind upp the whoe pr
 
 - [http://localhost:4114/](http://localhost:4114/)
 - [http://localhost:3113/](http://localhost:3113/)

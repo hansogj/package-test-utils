@@ -28,6 +28,7 @@ jobs:
       - name: Test
         run: |
           pnpm i --frozen-lockfile
-          npm run ws:test
+          pnpm run test
+          pnpm -r build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

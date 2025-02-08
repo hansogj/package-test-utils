@@ -7,7 +7,6 @@ Test suite for hansogj npm packages
 ### Installation
 
 Run `pnpm i --frozen-lockfile` to install dependencies for utility package, and then `pnpm -r build ` to build all workspaces
-
 Each folder
 
 ```bash
@@ -28,8 +27,14 @@ To verify the packages open in you favorite browser
 
 ### Docker
 
-There is also a [Dockerfile](Dockerfile) and a [docker-compose.yml](docker-compose.yml) that will run the three servers in separate containers. Just wind upp the whoe pr
+There is also a [Dockerfile](Dockerfile) and a [docker-compose.yml](docker-compose.yml) that will run the three servers in separate containers. Just wind upp the whole project
 
+````
 - [http://localhost:4114/](http://localhost:4114/)
 - [http://localhost:3113/](http://localhost:3113/)
 - [http://localhost:2112/](http://localhost:2112/)
+
+```bash
+docker build .
+docker compose up
+````

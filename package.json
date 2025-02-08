@@ -8,6 +8,7 @@
     "web-ts": "pnpm --filter web-ts",
     "web-cs": "pnpm --filter web-cs",
     "web-js": "pnpm --filter web-js",
+    "build": "pnpm -r build",
     "test": "pnpm -r test",
     "serve:all": "/usr/bin/terminator -u -l ptu 2> /dev/null > /dev/null &",
     "update": "npx npm-check-updates -i -t minor",

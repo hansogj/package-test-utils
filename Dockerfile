@@ -13,9 +13,9 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm add webpack webpack-dev-s
 
 RUN pnpm run -r build
 
-RUN pnpm deploy --filter=web-js --prod /prod/web-js
-RUN pnpm deploy --filter=web-ts --prod /prod/web-ts
-RUN pnpm deploy --filter=web-cs --prod /prod/web-cs
+RUN pnpm deploy --legacy --filter=web-js --prod /prod/web-js
+RUN pnpm deploy --legacy --filter=web-ts --prod /prod/web-ts
+RUN pnpm deploy --legacy --filter=web-cs --prod /prod/web-cs
 
 FROM base AS web-js
 COPY --from=build /prod/web-js /prod/web-js

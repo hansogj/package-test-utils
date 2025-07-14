@@ -1,4 +1,9 @@
 packages:
-  - 'apps/**'
-  - 'shared'
+  - apps/**
+  - shared
   - '!**/dist/**'
+
+onlyBuiltDependencies:
+  - '@hansogj/maybe'
+  - '@parcel/watcher'
+  - core-js

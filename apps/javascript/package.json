@@ -6,7 +6,7 @@
     "clean": "rm -rf dist",
     "build": "pnpm run clean && mkdir dist && cp -rL ../../node_modules/@hansogj node_modules/shared dist && cp index.html style.css src/ dist/. -R",
     "start": "http-server -p 2112 dist ",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"; exit 0"
   },
   "dependencies": {
     "shared": "workspace:*"

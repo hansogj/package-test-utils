@@ -56,8 +56,8 @@ importers:
         specifier: 5.6.3
         version: 5.6.3(webpack@5.97.1)
       husky:
-        specifier: 9.1.7
-        version: 9.1.7
+        specifier: 8.0.0
+        version: 8.0.0
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@20.14.0)(ts-node@10.9.2(@types/node@20.14.0)(typescript@5.7.3))
@@ -2318,9 +2318,9 @@ packages:
     resolution: {integrity: sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==}
     engines: {node: '>=10.17.0'}
 
-  husky@9.1.7:
-    resolution: {integrity: sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==}
-    engines: {node: '>=18'}
+  husky@8.0.0:
+    resolution: {integrity: sha512-4qbE/5dzNDNxFEkX9MNRPKl5+omTXQzdILCUWiqG/lWIAioiM5vln265/l6I2Zx8gpW8l1ukZwGQeCFbBZ6+6w==}
+    engines: {node: '>=14'}
     hasBin: true
 
   hyperdyperid@1.2.0:
@@ -5529,8 +5529,6 @@ snapshots:
     dependencies:
       babel-helper-function-name: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-literals@7.0.0-beta.3: {}
 
@@ -6511,7 +6509,7 @@ snapshots:
 
   human-signals@2.1.0: {}
 
-  husky@9.1.7: {}
+  husky@8.0.0: {}
 
   hyperdyperid@1.2.0: {}
 

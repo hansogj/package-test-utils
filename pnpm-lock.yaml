@@ -5256,6 +5256,8 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
+    transitivePeerDependencies:
+      - supports-color
 
   babel-helper-optimise-call-expression@7.0.0-beta.3:
     dependencies:
@@ -5294,6 +5296,8 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
+    transitivePeerDependencies:
+      - supports-color
 
   babel-helper-wrap-function@7.0.0-beta.3:
     dependencies:
@@ -5422,6 +5426,8 @@ snapshots:
   babel-plugin-transform-es2015-computed-properties@7.0.0-beta.3:
     dependencies:
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-destructuring@7.0.0-beta.3: {}
 
@@ -5444,22 +5450,30 @@ snapshots:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-commonjs@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-helper-simple-access: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-systemjs@7.0.0-beta.3:
     dependencies:
       babel-helper-hoist-variables: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-umd@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-object-super@7.0.0-beta.3:
     dependencies:

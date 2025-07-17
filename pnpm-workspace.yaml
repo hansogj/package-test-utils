@@ -1,4 +1,11 @@
 packages:
-  - 'apps/**'
-  - 'shared'
+  - apps/**
+  - shared
   - '!**/dist/**'
+
+ignoredBuiltDependencies:
+  - '@hansogj/maybe'
+  - '@parcel/watcher'
+  - core-js
+
+injectWorkspacePackages: true

@@ -6,11 +6,12 @@
     "clean": "rm -rf dist",
     "build": "webpack --config ./webpack.config.js",
     "serve": "webpack serve --config ./webpack.config.js",
-    "start": "http-server -p 4114 dist ",
+    "start": "pnpm exec http-server -p 4114 dist ",
     "test": "jest --config=./jest.config.js",
     "test:watch": "pnpm run test --watchAll"
   },
   "dependencies": {
-    "shared": "workspace:*"
+    "shared": "workspace:*",
+    "http-server": "14.1.1"
   }
 }

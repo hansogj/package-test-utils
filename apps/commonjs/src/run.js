@@ -24,7 +24,7 @@ export const run = () => {
             verify("array first", () => ["first", "second"].first()).toEqual(["first"]);
         })
         .test("find.js", () =>
-            verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual(versions))
+            verify("li:", () => find("li", window.document.body).map((e) => e.innerText)).toEqual(Object.entries(versions).map((keyVal) => keyVal.join("@v"))))
         .test("maybe", () => {
             verify("maybe should filter defined elements", () =>
                 maybe(find("ul"))

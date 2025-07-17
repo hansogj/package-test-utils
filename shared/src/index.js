@@ -4,13 +4,13 @@ const shared = {
     suite: require('./test.suite').suite,
     html: require('./test.suite').html,
     dependencies: require('./dependencies').dependencies,
-    versions: [
-        '@hansogj/abonnement-js@v4.3.0',
-        '@hansogj/array.utils@v2.3.0',
-        '@hansogj/find-js@v6.3.0',
-        '@hansogj/maybe@v2.2.23',
-        "http-server@v14.1.1"
-    ]
+    versions: {
+        '@hansogj/abonnement-js': '4.5.0',
+        '@hansogj/array.utils': '2.5.0',
+        '@hansogj/find-js': '6.5.0',
+        '@hansogj/maybe': '2.2.23',
+        'http-server': '14.1.1'
+    }
 }
 
 try {

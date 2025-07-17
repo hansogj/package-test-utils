@@ -1,12 +1,25 @@
 FROM node:20-slim AS base
+
+ENV NODE_VERSION=20.19.3
+ENV PNPM_VERSION=10.13.1
+
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install --global corepack@latest
 RUN corepack enable
+RUN corepack prepare pnpm@$PNPM_VERSION --activate
+RUN pnpm --version
+RUN node -v
 
 FROM base AS build
 COPY . /usr/src/app
 WORKDIR /usr/src/app
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
+
+RUN pnpm config set store-dir ~/.pnpm-store
+
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile --force
+RUN pnpm run -r build
+
 ENV PATH="./node_modules/.bin:$PATH"
 
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm add webpack webpack-dev-server -g

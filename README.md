@@ -35,7 +35,7 @@ There is also a [Dockerfile](Dockerfile) and a [docker-compose.yml](docker-compo
 - [http://localhost:2112/](http://localhost:2112/)
 
 ```bash
-pnpm run docker:clean
+pnpm run clean // NB! important to flush cache so that old version numbers not listed
 docker build .
 docker container prune && docker compose up
 ````

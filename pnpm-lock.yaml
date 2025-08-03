@@ -77,8 +77,8 @@ importers:
         specifier: 1.89.2
         version: 1.89.2
       sass-loader:
-        specifier: 14.2.1
-        version: 14.2.1(sass@1.89.2)(webpack@5.101.0)
+        specifier: 16.0.5
+        version: 16.0.5(sass@1.89.2)(webpack@5.101.0)
       style-loader:
         specifier: 4.0.0
         version: 4.0.0(webpack@5.101.0)
@@ -3178,8 +3178,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass-loader@14.2.1:
-    resolution: {integrity: sha512-G0VcnMYU18a4N7VoNDegg2OuMjYtxnqzQWARVWCIVSZwJeiL9kg8QMsuIZOplsJgTzZLF6jGxI3AClj8I9nRdQ==}
+  sass-loader@16.0.5:
+    resolution: {integrity: sha512-oL+CMBXrj6BZ/zOq4os+UECPL+bWqt6OAC6DWS8Ln8GZRcMDjlJ4JC3FBDuHJdYaFWIdKNIBYmtZtK2MaMkNIw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -5288,8 +5288,6 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
-    transitivePeerDependencies:
-      - supports-color
 
   babel-helper-optimise-call-expression@7.0.0-beta.3:
     dependencies:
@@ -5328,8 +5326,6 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
-    transitivePeerDependencies:
-      - supports-color
 
   babel-helper-wrap-function@7.0.0-beta.3:
     dependencies:
@@ -5458,8 +5454,6 @@ snapshots:
   babel-plugin-transform-es2015-computed-properties@7.0.0-beta.3:
     dependencies:
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-destructuring@7.0.0-beta.3: {}
 
@@ -5482,30 +5476,22 @@ snapshots:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-commonjs@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-helper-simple-access: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-systemjs@7.0.0-beta.3:
     dependencies:
       babel-helper-hoist-variables: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-umd@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-object-super@7.0.0-beta.3:
     dependencies:
@@ -7486,7 +7472,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@14.2.1(sass@1.89.2)(webpack@5.101.0):
+  sass-loader@16.0.5(sass@1.89.2)(webpack@5.101.0):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
@@ -7730,7 +7716,7 @@ snapshots:
 
   tapable@2.2.2: {}
 
-  terser-webpack-plugin@5.3.14(webpack@5.101.0):
+  terser-webpack-plugin@5.3.14(webpack@5.101.0(webpack-cli@5.1.4)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.29
       jest-worker: 27.5.1
@@ -8010,7 +7996,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.2
       tapable: 2.2.2
-      terser-webpack-plugin: 5.3.14(webpack@5.101.0)
+      terser-webpack-plugin: 5.3.14(webpack@5.101.0(webpack-cli@5.1.4))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
     optionalDependencies:

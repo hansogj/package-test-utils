@@ -21,7 +21,7 @@ contains scripts and html-templates needed to verify the different packages pull
 
 ### Run
 
-Commands `pnpm web-cjs serve` && `pnpm web-js serve` && `pnpm web-ts serve` runs the webpack server for commonjs and typescript, respectively. Likewise, `pnpm web-cjs run test:watch` && `pnpm web-ts run test:watch` will run tests for the two modes.
+Commands `pnpm web-cs serve` && `pnpm web-js serve` && `pnpm web-ts serve` runs the webpack server for commonjs and typescript, respectively. Likewise, `pnpm web-cjs run test:watch` && `pnpm web-ts run test:watch` will run tests for the two modes.
 
 To verify the packages open in you favorite browser
 

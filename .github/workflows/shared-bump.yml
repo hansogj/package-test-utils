@@ -1,19 +1,21 @@
-name: "shared bump"
+name: 'shared bump'
 
 on:
+  # The 'secrets' block is removed entirely, as GITHUB_TOKEN is automatically available
   workflow_call:
     inputs:
       version:
         type: string
-    secrets:
-      deployKey:
-        required: true
 
 jobs:
   common-bump:
     runs-on: ubuntu-latest
+
+    # CRITICAL: This permission grants the GITHUB_TOKEN the necessary write access
+    # to the repository's contents (for pushing the version bump and tags).
     permissions:
       contents: write
+
     strategy:
       matrix:
         node-version: [20.X]
@@ -21,18 +23,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # We no longer need to pass 'ssh-key'.
+          # The checkout action will use the GITHUB_TOKEN, which is available
+          # because we set 'permissions: contents: write' above.
           fetch-depth: 0
-          ssh-key: ${{ secrets.deployKey }}
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
+      # The user name/email configuration is necessary so Git knows who made the commit
       - name: Configure git
         run: |
           git config user.name "GitHubActions"
-          git config user.email "<>"
+          # Use the GITHUB_ACTOR (the user/bot that triggered the workflow) for a better audit trail
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Set default value
         id: defaultname
@@ -44,8 +50,10 @@ jobs:
         run: |
           version="${{ steps.defaultname.outputs.value }}"
           echo "bumping npm version with target $version"
+          # The npm version command automatically commits the change and creates a tag
           npm version $version --force
 
+      # Pushing the commits and tags will now be handled using the GITHUB_TOKEN's credentials.
       - name: Update git
         run: |
           git push --force

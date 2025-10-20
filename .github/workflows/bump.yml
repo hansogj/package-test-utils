@@ -2,14 +2,14 @@ name: bump version
 
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
     types: [closed]
   workflow_dispatch:
     inputs:
       version:
         type: choice
         description: Bump into new version
-        default: "patch"
+        default: 'patch'
         options:
           - major
           - minor
@@ -25,7 +25,8 @@ jobs:
   bump:
     needs: [build]
     uses: ./.github/workflows/shared-bump.yml
+    permissions:
+      contents: write
+      id-token: write # Often needed for other tasks, good practice to include
     with:
       version: ${{ github.event.inputs.version }}
-    secrets:
-      deployKey: ${{ secrets.DEPLOY_KEY }}

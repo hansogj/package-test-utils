@@ -77,8 +77,8 @@ importers:
         specifier: 1.90.0
         version: 1.90.0
       sass-loader:
-        specifier: 14.2.1
-        version: 14.2.1(sass@1.90.0)(webpack@5.101.2)
+        specifier: 16.0.6
+        version: 16.0.6(sass@1.90.0)(webpack@5.101.2)
       style-loader:
         specifier: 4.0.0
         version: 4.0.0(webpack@5.101.2)
@@ -3239,8 +3239,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass-loader@14.2.1:
-    resolution: {integrity: sha512-G0VcnMYU18a4N7VoNDegg2OuMjYtxnqzQWARVWCIVSZwJeiL9kg8QMsuIZOplsJgTzZLF6jGxI3AClj8I9nRdQ==}
+  sass-loader@16.0.6:
+    resolution: {integrity: sha512-sglGzId5gmlfxNs4gK2U3h7HlVRfx278YK6Ono5lwzuvi1jxig80YiuHkaDBVsYIKFhx8wN7XSCI0M2IDS/3qA==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -5429,8 +5429,6 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
-    transitivePeerDependencies:
-      - supports-color
 
   babel-helper-optimise-call-expression@7.0.0-beta.3:
     dependencies:
@@ -5469,8 +5467,6 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.21
-    transitivePeerDependencies:
-      - supports-color
 
   babel-helper-wrap-function@7.0.0-beta.3:
     dependencies:
@@ -5599,8 +5595,6 @@ snapshots:
   babel-plugin-transform-es2015-computed-properties@7.0.0-beta.3:
     dependencies:
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-destructuring@7.0.0-beta.3: {}
 
@@ -5623,30 +5617,22 @@ snapshots:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-commonjs@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-helper-simple-access: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-systemjs@7.0.0-beta.3:
     dependencies:
       babel-helper-hoist-variables: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-modules-umd@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
-    transitivePeerDependencies:
-      - supports-color
 
   babel-plugin-transform-es2015-object-super@7.0.0-beta.3:
     dependencies:
@@ -7647,7 +7633,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@14.2.1(sass@1.90.0)(webpack@5.101.2):
+  sass-loader@16.0.6(sass@1.90.0)(webpack@5.101.2):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:

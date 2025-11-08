@@ -1,5 +1,5 @@
 {
-  "version": "1.4.8",
+  "version": "1.5.0",
   "description": "package-test-utils-ts",
   "name": "package-test-utils-ts",
   "preinstall": "npx only-allow pnpm",
@@ -17,7 +17,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/core": "7.28.3",
+    "@babel/core": "7.28.4",
     "@babel/preset-env": "7.28.3",
     "@babel/preset-typescript": "7.27.1",
     "@types/jest": "29.5.14",
@@ -33,18 +33,18 @@
     "jsdom": "27.0.1",
     "prettier": "3.6.2",
     "raw-loader": "4.0.2",
-    "sass": "1.90.0",
+    "sass": "1.93.2",
     "sass-loader": "14.2.1",
     "style-loader": "4.0.0",
-    "webpack": "5.101.2",
+    "webpack": "5.102.1",
     "webpack-cli": "5.1.4",
     "webpack-dev-server": "5.2.2"
   },
   "dependencies": {
-    "@hansogj/abonnement-js": "4.7.2",
-    "@hansogj/array.utils": "2.7.2",
-    "@hansogj/find-js": "6.7.2",
-    "@hansogj/maybe": "2.4.4",
+    "@hansogj/abonnement-js": "4.7.3",
+    "@hansogj/array.utils": "2.7.3",
+    "@hansogj/find-js": "6.7.3",
+    "@hansogj/maybe": "2.5.1",
     "http-server": "14.1.1"
   },
   "engines": {

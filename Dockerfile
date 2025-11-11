@@ -1,11 +1,11 @@
-FROM node:20-slim AS base
+FROM node:25-slim AS base
 
-ENV NODE_VERSION=20.19.3
-ENV PNPM_VERSION=10.13.1
+ENV NODE_VERSION=25.0.0
+ENV PNPM_VERSION=10.21.0
 
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
-RUN npm install --global corepack@latest
+RUN npm install --global corepack@latest --force
 RUN corepack enable
 RUN corepack prepare pnpm@$PNPM_VERSION --activate
 RUN pnpm --version
@@ -33,17 +33,17 @@ RUN pnpm deploy --filter=web-cs --prod /prod/web-cs
 FROM base AS web-js
 COPY --from=build /prod/web-js /prod/web-js
 WORKDIR /prod/web-js
-EXPOSE 2112:2112
+EXPOSE 2112
 CMD [ "pnpm", "start" ]
 
 FROM base AS web-ts
 COPY --from=build /prod/web-ts /prod/web-ts
 WORKDIR /prod/web-ts
-EXPOSE 3113:3113
+EXPOSE 3113
 CMD [ "pnpm", "start" ]
 
 FROM base AS web-cs
 COPY --from=build /prod/web-cs /prod/web-cs
 WORKDIR /prod/web-cs
-EXPOSE 4114:4114
+EXPOSE 4114
 CMD [ "pnpm", "start" ]

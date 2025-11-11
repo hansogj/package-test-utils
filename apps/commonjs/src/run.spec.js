@@ -82,9 +82,9 @@ describe("javascripts", () => {
 
 
         it("value is updated", () => {
-            abonnement.varsle("update")
+            abonnement.varsle("update");
             expect(abonnentSpy).toHaveBeenCalledTimes(2);
-            expect(abonnentSpy).lastCalledWith("update", "init");
+            expect(abonnentSpy).toHaveBeenLastCalledWith("update", "init");
             expect(abonnement.verdi).toEqual("update");
 
         });

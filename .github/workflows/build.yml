@@ -26,10 +26,11 @@ jobs:
           version: 10
 
       - name: Test
+        env:
+          NODE_OPTIONS: '--localstorage-file=/tmp/.localstorage'
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           pnpm -v
           pnpm i --frozen-lockfile
           pnpm run test
           pnpm -r build
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

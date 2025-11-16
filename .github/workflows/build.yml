@@ -28,7 +28,6 @@ jobs:
       - name: Test
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_OPTIONS: '--require ./webpack.setup.js'
         run: |
           pnpm -v
           pnpm i --frozen-lockfile

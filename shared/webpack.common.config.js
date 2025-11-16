@@ -1,3 +1,16 @@
+// Mock localStorage for Node.js environments (CI/CD).
+// Prevents SecurityError in html-webpack-plugin's template evaluation.
+if (typeof localStorage === 'undefined' && typeof global !== 'undefined') {
+    global.localStorage = {
+        data: {},
+        getItem(key) { return this.data[key] || null; },
+        setItem(key, value) { this.data[key] = String(value); },
+        removeItem(key) { delete this.data[key]; },
+        clear() { this.data = {}; },
+        key(index) { return Object.keys(this.data)[index] || null; },
+        get length() { return Object.keys(this.data).length; }
+    };
+}
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');

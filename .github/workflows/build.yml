@@ -27,6 +27,7 @@ jobs:
 
       - name: Test
         run: |
+          pnpm -v
           pnpm i --frozen-lockfile
           pnpm run test
           pnpm -r build

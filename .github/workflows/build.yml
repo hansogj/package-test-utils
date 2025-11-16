@@ -27,10 +27,18 @@ jobs:
 
       - name: Test
         env:
-          NODE_OPTIONS: '--localstorage-file=/tmp/.localstorage'
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           pnpm -v
           pnpm i --frozen-lockfile
           pnpm run test
-          pnpm -r build
+          # Run pnpm under node with the required flag because NODE_OPTIONS is restricted in GH actions
+          PNPM_BIN=$(command -v pnpm || true)
+          if [ -z "$PNPM_BIN" ]; then
+            echo "pnpm not found in PATH"
+            exit 1
+          fi
+          # Ensure the workspace-local storage file exists and use it (avoids using /tmp)
+          mkdir -p "$GITHUB_WORKSPACE"
+          touch "$GITHUB_WORKSPACE/.localstorage"
+          node --localstorage-file="$GITHUB_WORKSPACE/.localstorage" "$PNPM_BIN" -r build

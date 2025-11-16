@@ -9,3 +9,6 @@ ignoredBuiltDependencies:
   - core-js
 
 injectWorkspacePackages: true
+
+onlyBuiltDependencies:
+  - unrs-resolver

@@ -28,33 +28,9 @@ jobs:
       - name: Test
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_OPTIONS: '--require ./webpack.setup.js'
         run: |
           pnpm -v
           pnpm i --frozen-lockfile
           pnpm run test
-          # Run pnpm under node with the required flag because NODE_OPTIONS is restricted in GH actions
-          PNPM_BIN=$(command -v pnpm || true)
-          if [ -z "$PNPM_BIN" ]; then
-            echo "pnpm not found in PATH"
-            exit 1
-          fi
-          # Ensure the workspace-local storage file exists and use it
-          mkdir -p "$GITHUB_WORKSPACE"
-          touch "$GITHUB_WORKSPACE/.localstorage"
-          # The pnpm shim at $PNPM_BIN is a shell script that invokes node on the real JS entry.
-          # Extract the JS entry path from the shim and invoke it with node so we can pass
-          # --localstorage-file (calling the shell script with node would try to parse shell as JS).
-          JS_PATH=$(sed -n 's/.*node \("\?\)\([^" ]*pnpm[^" ]*\.cjs\)\1.*/\2/p' "$PNPM_BIN" || true)
-          if [ -n "$JS_PATH" ]; then
-            # If JS_PATH is relative, resolve it relative to the shim's directory
-            case "$JS_PATH" in
-              /*) JS_ABS="$JS_PATH" ;;
-              *) JS_ABS="$(dirname "$PNPM_BIN")/$JS_PATH" ;;
-            esac
-            echo "Invoking node on pnpm entry: $JS_ABS"
-            node --localstorage-file="$GITHUB_WORKSPACE/.localstorage" "$JS_ABS" -r build
-          else
-            # Fallback: try invoking pnpm directly (may fail if the shim is a shell script)
-            echo "Could not extract pnpm JS entry from $PNPM_BIN, falling back to direct pnpm call"
-            node --localstorage-file="$GITHUB_WORKSPACE/.localstorage" "$PNPM_BIN" -r build
-          fi
+          pnpm -r build

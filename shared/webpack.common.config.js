@@ -23,7 +23,9 @@ module.exports = ({ entry, port, template }) => {
             templateParameters: {
                 dependencies: JSON.stringify(dependencies, null, 4)
             },
-
+            // In Node.js environments (e.g., CI), html-webpack-plugin may try to access localStorage.
+            // Provide a dummy implementation to prevent SecurityError.
+            inject: 'body',
         })],
         mode: "development",
         module: {

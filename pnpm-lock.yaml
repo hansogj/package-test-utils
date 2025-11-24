@@ -74,11 +74,11 @@ importers:
         specifier: 4.0.2
         version: 4.0.2(webpack@5.102.1)
       sass:
-        specifier: 1.94.0
-        version: 1.94.0
+        specifier: 1.94.2
+        version: 1.94.2
       sass-loader:
         specifier: 16.0.6
-        version: 16.0.6(sass@1.94.0)(webpack@5.102.1)
+        version: 16.0.6(sass@1.94.2)(webpack@5.102.1)
       style-loader:
         specifier: 4.0.0
         version: 4.0.0(webpack@5.102.1)
@@ -3344,8 +3344,8 @@ packages:
       webpack:
         optional: true
 
-  sass@1.94.0:
-    resolution: {integrity: sha512-Dqh7SiYcaFtdv5Wvku6QgS5IGPm281L+ZtVD1U2FJa7Q0EFRlq8Z3sjYtz6gYObsYThUOz9ArwFqPZx+1azILQ==}
+  sass@1.94.2:
+    resolution: {integrity: sha512-N+7WK20/wOr7CzA2snJcUSSNTCzeCGUTFY3OgeQP3mZ1aj9NMQ0mSTXwlrnd89j33zzQJGqIN52GIOmYrfq46A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7740,14 +7740,14 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@16.0.6(sass@1.94.0)(webpack@5.102.1):
+  sass-loader@16.0.6(sass@1.94.2)(webpack@5.102.1):
     dependencies:
       neo-async: 2.6.2
     optionalDependencies:
-      sass: 1.94.0
+      sass: 1.94.2
       webpack: 5.102.1(webpack-cli@6.0.1)
 
-  sass@1.94.0:
+  sass@1.94.2:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.1.4
@@ -7998,7 +7998,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  terser-webpack-plugin@5.3.14(webpack@5.102.1):
+  terser-webpack-plugin@5.3.14(webpack@5.102.1(webpack-cli@6.0.1)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -8306,7 +8306,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.14(webpack@5.102.1)
+      terser-webpack-plugin: 5.3.14(webpack@5.102.1(webpack-cli@6.0.1))
       watchpack: 2.4.4
       webpack-sources: 3.3.3
     optionalDependencies:

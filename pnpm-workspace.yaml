@@ -3,9 +3,4 @@ packages:
   - shared
   - '!**/dist/**'
 
-ignoredBuiltDependencies:
-  - '@hansogj/maybe'
-  - '@parcel/watcher'
-  - core-js
-
 injectWorkspacePackages: true

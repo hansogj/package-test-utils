@@ -4,8 +4,15 @@ const commonConfig = require('shared/webpack.common.config')
 const root = path.resolve(__dirname);
 const tsLoader = {
     test: /\.(ts|tsx)$/i,
-    loader: 'ts-loader',
     exclude: ['/node_modules/'],
+    use: [
+        {
+            loader: 'babel-loader',
+        },
+        {
+            loader: 'ts-loader',
+        },
+    ],
 };
 
 const config = commonConfig({

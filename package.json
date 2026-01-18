@@ -3,6 +3,7 @@
   "description": "package-test-utils-ts",
   "name": "package-test-utils-ts",
   "preinstall": "npx only-allow pnpm",
+  "minimumReleaseAge": 10800,
   "scripts": {
     "clean": "pnpm -r clean  && rm -rf node_modules apps/*/node_modules shared/*/node_modules && pnpm run docker:clean",
     "docker:clean": "docker image rm -f web-js web-cs web-ts",

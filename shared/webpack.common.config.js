@@ -37,6 +37,13 @@ module.exports = ({ entry, port, template }) => {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
             },

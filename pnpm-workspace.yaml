@@ -3,9 +3,10 @@ packages:
   - shared
   - '!**/dist/**'
 
-ignoredBuiltDependencies:
+injectWorkspacePackages: true
+
+onlyBuiltDependencies:
   - '@hansogj/maybe'
   - '@parcel/watcher'
   - core-js
-
-injectWorkspacePackages: true
+  - unrs-resolver

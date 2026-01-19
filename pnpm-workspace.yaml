@@ -4,3 +4,9 @@ packages:
   - '!**/dist/**'
 
 injectWorkspacePackages: true
+
+onlyBuiltDependencies:
+  - '@hansogj/maybe'
+  - '@parcel/watcher'
+  - core-js
+  - unrs-resolver

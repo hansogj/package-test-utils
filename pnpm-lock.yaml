@@ -19,8 +19,8 @@ importers:
         specifier: 6.7.3
         version: 6.7.3
       '@hansogj/maybe':
-        specifier: 2.5.1
-        version: 2.5.1
+        specifier: 2.5.10
+        version: 2.5.10
     devDependencies:
       '@babel/core':
         specifier: 7.28.6
@@ -803,9 +803,9 @@ packages:
   '@hansogj/find-js@6.7.3':
     resolution: {integrity: sha512-lw3vQidy0gwpM4j2qZga6ZggzaO0U2lneRMMjQoG3v40WqRe/IsGnPv0NFQHSSutES7HTa4DNViJdmdFHSbakQ==}
 
-  '@hansogj/maybe@2.5.1':
-    resolution: {integrity: sha512-I+DBOVJAnuLkz5R7vJG8YNTD2F7b0+yuU5QYE/3Dkav1OCBzpGUQFoQiuNrbshSi71mky9KUVx34dxlyCc76Iw==}
-    engines: {node: ^18 || ^20 || ^ 21}
+  '@hansogj/maybe@2.5.10':
+    resolution: {integrity: sha512-xHpwf3wxW1miUQh922PshlakFBEMvkMecv3P1lHmAMKmt9m+emwgl2yuTSbUDfqHlmJrFaoqs0kOGKOPuVyD5A==}
+    engines: {node: ^18 || ^20 || ^ 21 || ^ 22}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -4917,7 +4917,7 @@ snapshots:
     dependencies:
       array-from: 2.1.1
 
-  '@hansogj/maybe@2.5.1': {}
+  '@hansogj/maybe@2.5.10': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -5939,6 +5939,8 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.23
+    transitivePeerDependencies:
+      - supports-color
 
   babel-helper-optimise-call-expression@7.0.0-beta.3:
     dependencies:
@@ -5977,6 +5979,8 @@ snapshots:
       babel-template: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
       lodash: 4.17.23
+    transitivePeerDependencies:
+      - supports-color
 
   babel-helper-wrap-function@7.0.0-beta.3:
     dependencies:
@@ -6101,6 +6105,8 @@ snapshots:
   babel-plugin-transform-es2015-computed-properties@7.0.0-beta.3:
     dependencies:
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-destructuring@7.0.0-beta.3: {}
 
@@ -6123,22 +6129,30 @@ snapshots:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-commonjs@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-helper-simple-access: 7.0.0-beta.3
       babel-types: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-systemjs@7.0.0-beta.3:
     dependencies:
       babel-helper-hoist-variables: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-modules-umd@7.0.0-beta.3:
     dependencies:
       babel-helper-module-transforms: 7.0.0-beta.3
       babel-template: 7.0.0-beta.3
+    transitivePeerDependencies:
+      - supports-color
 
   babel-plugin-transform-es2015-object-super@7.0.0-beta.3:
     dependencies:
@@ -8352,7 +8366,7 @@ snapshots:
 
   tapable@2.3.0: {}
 
-  terser-webpack-plugin@5.3.16(webpack@5.104.1):
+  terser-webpack-plugin@5.3.16(webpack@5.104.1(webpack-cli@6.0.1)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
@@ -8669,7 +8683,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.16(webpack@5.104.1)
+      terser-webpack-plugin: 5.3.16(webpack@5.104.1(webpack-cli@6.0.1))
       watchpack: 2.5.1
       webpack-sources: 3.3.3
     optionalDependencies:

@@ -30,14 +30,14 @@
     "husky": "9.1.7",
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
-    "jsdom": "27.4.0",
+    "jsdom": "29.0.1",
     "prettier": "3.8.1",
     "raw-loader": "4.0.2",
     "sass": "1.98.0",
     "sass-loader": "16.0.7",
     "style-loader": "4.0.0",
     "webpack": "5.105.4",
-    "webpack-cli": "6.0.1",
+    "webpack-cli": "7.0.2",
     "webpack-dev-server": "5.2.3"
   },
   "dependencies": {

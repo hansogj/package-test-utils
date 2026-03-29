@@ -12,11 +12,14 @@
             "es5",
             "es2019"
         ],
-        "allowJs": true
+        "allowJs": true,
+        "ignoreDeprecations": "6.0",
+        "types": ["jest"]
     },
     "files": [
         "src/index.ts",
         "src/run.ts",
-        "src/run.spec.ts"
+        "src/run.spec.ts",
+        "src/custom.d.ts"
     ]
 }

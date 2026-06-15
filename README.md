@@ -1,3 +1,8 @@
+> [!IMPORTANT]
+> **Archived — code moved to [hansogj/utils-ws](https://github.com/hansogj/utils-ws).**
+>
+> The verification harness previously maintained here was folded into the `utils-ws` monorepo on 2026-06-15 as part of [hansogj/utils-ws#29](https://github.com/hansogj/utils-ws/pull/29). It now lives under `apps/` and `harness/` next to the packages it verifies. No further updates will land here.
+
 [![example workflow](https://github.com/hansogj/package-test-utils/actions/workflows/build.yml/badge.svg)](https://github.com/hansogj/package-test-utils/actions/workflows/build.yml/badge.svg)
 
 # PACKAGE-TEST-UTILS
